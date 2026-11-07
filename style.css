@@ -88,13 +88,13 @@ html[lang="ja"] #countdown,
   font-family: var(--font-timer) !important;
 }
 
-/* ---- Static Single Background (1.jpg) ---- */
+/* ---- Static Single Background (1.png) ---- */
 #bg-layer {
   position: fixed;
   inset: 0;
   z-index: 0;
   background-color: #080812;
-  background-image: url('1.jpg');
+  background-image: url('1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

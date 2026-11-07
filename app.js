@@ -951,7 +951,7 @@ function flashScreen() {
 }
 
 // ================================================================
-// 17. STATIC BACKGROUND (1.jpg)
+// 17. STATIC BACKGROUND (1.png)
 // Slideshow removed to maximize 60-144fps rendering performance
 // ================================================================
 
