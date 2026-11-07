@@ -130,10 +130,10 @@
           },
           {
             "@type": "Question",
-            "name": "How does the real JLPT break phase work in this simulation?",
+            "name": "How do breaks work in this JLPT simulation?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "In official JEES test sites, breaks are divided into three distinct phases: (1) Paper Collection and Verification (~5 mins, examinees remain seated); (2) Restroom & Intermission (10-15 mins); (3) Return to Assigned Seat, Identity Check, and Audio Equipment Test (5-10 mins). This simulator models all three phases with chime alerts."
+              "text": "After each exam section finishes, the simulator automatically transitions into the official break period (20 minutes between Section 1 and Section 2, and 30 minutes before Listening). When the break concludes, the next exam section starts automatically, or examinees can click 'Skip Break' to begin the next section immediately."
             }
           }
         ]
@@ -218,31 +218,10 @@
       <div id="subphase-label"></div>
     </section>
 
-    <!-- Break Phase Indicator -->
-    <section id="break-phase-section" class="hidden">
-      <div class="break-steps">
-        <div class="break-step" id="bstep-1">
-          <span class="step-num">1</span>
-          <span class="step-text" id="bstep-1-text"></span>
-        </div>
-        <div class="break-step-line"></div>
-        <div class="break-step" id="bstep-2">
-          <span class="step-num">2</span>
-          <span class="step-text" id="bstep-2-text"></span>
-        </div>
-        <div class="break-step-line"></div>
-        <div class="break-step" id="bstep-3">
-          <span class="step-num">3</span>
-          <span class="step-text" id="bstep-3-text"></span>
-        </div>
-      </div>
-    </section>
-
     <!-- Controls -->
     <section id="controls-section">
       <button id="start-btn"></button>
       <button id="skip-break-btn" class="hidden"></button>
-      <button id="skip-phase-btn" class="hidden secondary-btn"></button>
       <button id="reset-btn"      class="hidden hold-btn">
         <span class="hold-text" id="hold-text"></span>
         <span class="hold-fill"></span>

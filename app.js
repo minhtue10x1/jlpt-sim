@@ -47,27 +47,14 @@ const I18N = {
     indSec1: 'Phần thi 1',
     indSec2: 'Phần thi 2',
     indSec3: 'Phần thi 3',
-    // Break phases (Quy trình giám thị phòng thi JEES)
-    bkCollection:    'Thu bài thi & Kiểm đếm',
-    bkCollectionSub: 'Thí sinh ngồi yên tại chỗ — Giám thị đang thu và kiểm đếm đủ bài thi',
-    bkIntermission:    'Nghỉ giải lao',
-    bkIntermissionSub: 'Thí sinh được phép ra ngoài hành lang, đi vệ sinh, uống nước và thư giãn',
-    bkReturn:      'Ổn định chỗ ngồi & Chuẩn bị',
-    bkReturn20Sub: 'Về đúng vị trí ngồi — Giám thị đối chiếu thẻ dự thi và phát đề thi tiếp theo',
-    bkReturn30Sub: 'Về đúng vị trí ngồi — Giám thị đối chiếu thẻ dự thi, phát đề và thử âm thanh nghe',
-    // Break step indicator panel
-    bkStep1Label: 'Thu bài & Đếm',
-    bkStep1Sub:   'Ngồi yên tại chỗ',
-    bkStep2Label: 'Nghỉ giải lao',
-    bkStep2Sub:   'Ra ngoài / Vệ sinh',
-    bkStep3Label: 'Vào phòng chuẩn bị',
-    bkStep3Sub:   'Kiểm tra & Phát đề',
+    // Break
+    bkBreak:         'Nghỉ giải lao',
+    bkBreakSub:      'Thời gian nghỉ ngơi thư giãn · Nhấn "Bỏ qua giải lao" để làm tiếp phần tiếp theo ngay',
     // Controls & Actions
     startBtn:    'Bắt đầu làm bài',
     restartBtn:  'Thi lại từ đầu',
     holdReset:   'Nhấn giữ để đặt lại',
     skipBreak:   'Bỏ qua giải lao — Vào thi phần tiếp theo \u2192',
-    skipPhase:   'Bỏ qua giai đoạn này',
     examComplete: 'Chúc mừng bạn đã hoàn thành bài thi!',
     // Timeline preview labels
     tlVocab:       'Từ vựng',
@@ -76,8 +63,6 @@ const I18N = {
     tlListening:   'Nghe hiểu',
     tlBreak:       mins => `Giải lao \u00b7 ${mins}p`,
     // Formatted strings
-    breakPhaseLabel: (num, lbl) => `Giải lao \u00b7 Giai đoạn ${num}/3 \u00b7 ${lbl}`,
-    breakTitleFrag:  lbl        => `Giải lao (${lbl})`,
     titleDone:       lvl        => `Hoàn thành bài thi \u2014 JLPT ${lvl}`,
     titleIdle:       'Đồng hồ thi JLPT — Mô phỏng chuẩn JEES (N1-N5)',
     titleRunning:    (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
@@ -119,27 +104,14 @@ const I18N = {
     indSec1: 'Section 1',
     indSec2: 'Section 2',
     indSec3: 'Section 3',
-    // Break phases
-    bkCollection:    'Answer Sheet Collection',
-    bkCollectionSub: 'Please remain seated — Proctors are collecting and counting answer sheets',
-    bkIntermission:    'Intermission',
-    bkIntermissionSub: 'Examinees may leave the room for restrooms, water, and stretching',
-    bkReturn:      'Return to Seat & Verification',
-    bkReturn20Sub: 'Please be seated — ID verification and next test booklet distribution',
-    bkReturn30Sub: 'Please be seated — ID verification, booklet distribution & audio equipment check',
-    // Break step indicator panel
-    bkStep1Label: 'Sheet Collection',
-    bkStep1Sub:   'Remain seated',
-    bkStep2Label: 'Intermission',
-    bkStep2Sub:   'Restroom / Stretch',
-    bkStep3Label: 'Seated Check-in',
-    bkStep3Sub:   'ID & booklet check',
+    // Break
+    bkBreak:         'Break / Intermission',
+    bkBreakSub:      'Rest between sections · Click "Skip Break" to proceed to the next section immediately',
     // Controls & Actions
     startBtn:    'Start Exam',
     restartBtn:  'Restart Exam',
     holdReset:   'Hold to Reset',
     skipBreak:   'Skip Break — Start Next Section \u2192',
-    skipPhase:   'Skip This Break Phase',
     examComplete: 'Exam Complete — Well Done!',
     // Timeline preview labels
     tlVocab:       'Vocabulary',
@@ -148,8 +120,6 @@ const I18N = {
     tlListening:   'Listening',
     tlBreak:       mins => `Break \u00b7 ${mins}m`,
     // Formatted strings
-    breakPhaseLabel: (num, lbl) => `Break \u00b7 Phase ${num}/3 \u00b7 ${lbl}`,
-    breakTitleFrag:  lbl        => `Break (${lbl})`,
     titleDone:       lvl        => `Exam Complete \u2014 JLPT ${lvl}`,
     titleIdle:       'JLPT Exam Timer — Official JEES Timing Simulation (N1-N5)',
     titleRunning:    (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
@@ -191,27 +161,14 @@ const I18N = {
     indSec1: '第1科目',
     indSec2: '第2科目',
     indSec3: '第3科目',
-    // 休憩フェーズ（JEES試験室アナウンスに準拠）
-    bkCollection:    '答案用紙回収・確認',
-    bkCollectionSub: '着席のまま静かにお待ちください — 試験官が答案用紙を回収し枚数を確認中',
-    bkIntermission:    '休憩時間',
-    bkIntermissionSub: '教室の外へ退出できます。トイレ・水分補給・ストレッチ等をお済ませください',
-    bkReturn:      '再着席・本人確認・配布',
-    bkReturn20Sub: '指定の席に着席してください — 受験票の本人確認および次の問題冊子を配布します',
-    bkReturn30Sub: '指定の席に着席してください — 受験票の本人確認、問題冊子配布および音響機器テストを行います',
-    // 休憩ステップ表示
-    bkStep1Label: '用紙回収・確認',
-    bkStep1Sub:   '着席のまま待機',
-    bkStep2Label: '休憩時間',
-    bkStep2Sub:   'トイレ・水分補給',
-    bkStep3Label: '再着席・配布確認',
-    bkStep3Sub:   '本人確認・冊子配布',
+    // Break
+    bkBreak:         '休憩時間',
+    bkBreakSub:      '科目間の休憩時間です · 次の科目を開始する場合は「休憩をスキップ」を押してください',
     // コントロール
     startBtn:    '試験開始',
     restartBtn:  '最初からやり直す',
     holdReset:   '長押しでリセット',
     skipBreak:   '休憩をスキップして次の科目へ \u2192',
-    skipPhase:   'このフェーズをスキップ',
     examComplete: 'お疲れ様でした！試験終了です',
     // タイムライン表記
     tlVocab:       '文字・語彙',
@@ -220,8 +177,6 @@ const I18N = {
     tlListening:   '聴解',
     tlBreak:       mins => `休憩 \u00b7 ${mins}分`,
     // フォーマット文字列
-    breakPhaseLabel: (num, lbl) => `休憩 \u00b7 フェーズ ${num}/3 \u00b7 ${lbl}`,
-    breakTitleFrag:  lbl        => `休憩（${lbl}）`,
     titleDone:       lvl        => `試験終了 \u2014 JLPT ${lvl}`,
     titleIdle:       'JLPT 模擬タイマー — JEES 公式本試験仕様 (N1-N5)',
     titleRunning:    (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
@@ -234,25 +189,15 @@ const I18N = {
 
 const M = m => m * 60;
 
-// Standard 20-minute break between Section 1 and Section 2 (N3, N4, N5)
-const BREAK_20 = [
-  { type: 'break-phase', phaseNum: 1, labelKey: 'bkCollection',   subLabelKey: 'bkCollectionSub', duration: M(5)  },
-  { type: 'break-phase', phaseNum: 2, labelKey: 'bkIntermission', subLabelKey: 'bkIntermissionSub', duration: M(10) },
-  { type: 'break-phase', phaseNum: 3, labelKey: 'bkReturn',       subLabelKey: 'bkReturn20Sub',   duration: M(5)  },
-];
-
-// Standard 30-minute break before Listening (all levels N1-N5)
-const BREAK_30 = [
-  { type: 'break-phase', phaseNum: 1, labelKey: 'bkCollection',   subLabelKey: 'bkCollectionSub', duration: M(5)  },
-  { type: 'break-phase', phaseNum: 2, labelKey: 'bkIntermission', subLabelKey: 'bkIntermissionSub', duration: M(15) },
-  { type: 'break-phase', phaseNum: 3, labelKey: 'bkReturn',       subLabelKey: 'bkReturn30Sub',   duration: M(10) },
-];
+// Standard breaks (20 min between Sec1 & Sec2 for N3-N5; 30 min before Listening for all)
+const BREAK_20 = { type: 'break', duration: M(20) };
+const BREAK_30 = { type: 'break', duration: M(30) };
 
 const LEVELS = {
   N1: {
     sections: [
       { type: 'exam', labelKey: 'secLangKnowledgeReading', tlKey: 'tlLangReading', subLabelKey: 'subVocabGrammarReading', duration: M(110) },
-      ...BREAK_30,
+      BREAK_30,
       { type: 'exam', labelKey: 'secListening',            tlKey: 'tlListening',   subLabelKey: 'sub2of2',                 duration: M(55)  },
     ],
     individual: {
@@ -265,7 +210,7 @@ const LEVELS = {
   N2: {
     sections: [
       { type: 'exam', labelKey: 'secLangKnowledgeReading', tlKey: 'tlLangReading', subLabelKey: 'subVocabGrammarReading', duration: M(105) },
-      ...BREAK_30,
+      BREAK_30,
       { type: 'exam', labelKey: 'secListening',            tlKey: 'tlListening',   subLabelKey: 'sub2of2',                 duration: M(50)  },
     ],
     individual: {
@@ -278,9 +223,9 @@ const LEVELS = {
   N3: {
     sections: [
       { type: 'exam', labelKey: 'secLangKnowledgeVocab',          tlKey: 'tlVocab',     subLabelKey: 'sub1of3', duration: M(30) },
-      ...BREAK_20,
+      BREAK_20,
       { type: 'exam', labelKey: 'secLangKnowledgeGrammarReading', tlKey: 'tlGrammar',   subLabelKey: 'sub2of3', duration: M(70) },
-      ...BREAK_30,
+      BREAK_30,
       { type: 'exam', labelKey: 'secListening',                   tlKey: 'tlListening', subLabelKey: 'sub3of3', duration: M(40) },
     ],
     individual: {
@@ -294,9 +239,9 @@ const LEVELS = {
   N4: {
     sections: [
       { type: 'exam', labelKey: 'secLangKnowledgeVocab',          tlKey: 'tlVocab',     subLabelKey: 'sub1of3', duration: M(25) },
-      ...BREAK_20,
+      BREAK_20,
       { type: 'exam', labelKey: 'secLangKnowledgeGrammarReading', tlKey: 'tlGrammar',   subLabelKey: 'sub2of3', duration: M(55) },
-      ...BREAK_30,
+      BREAK_30,
       { type: 'exam', labelKey: 'secListening',                   tlKey: 'tlListening', subLabelKey: 'sub3of3', duration: M(35) },
     ],
     individual: {
@@ -310,9 +255,9 @@ const LEVELS = {
   N5: {
     sections: [
       { type: 'exam', labelKey: 'secLangKnowledgeVocab',          tlKey: 'tlVocab',     subLabelKey: 'sub1of3', duration: M(20) },
-      ...BREAK_20,
+      BREAK_20,
       { type: 'exam', labelKey: 'secLangKnowledgeGrammarReading', tlKey: 'tlGrammar',   subLabelKey: 'sub2of3', duration: M(40) },
-      ...BREAK_30,
+      BREAK_30,
       { type: 'exam', labelKey: 'secListening',                   tlKey: 'tlListening', subLabelKey: 'sub3of3', duration: M(30) },
     ],
     individual: {
@@ -381,12 +326,8 @@ const dom = {
   phaseLabel:      $('phase-label'),
   countdown:       $('countdown'),
   subphaseLabel:   $('subphase-label'),
-  breakSection:    $('break-phase-section'),
-  bsteps:          [null, $('bstep-1'), $('bstep-2'), $('bstep-3')],
-  bstepText:       [null, $('bstep-1-text'), $('bstep-2-text'), $('bstep-3-text')],
   startBtn:        $('start-btn'),
   skipBreakBtn:    $('skip-break-btn'),
-  skipPhaseBtn:    $('skip-phase-btn'),
   resetBtn:        $('reset-btn'),
   holdText:        $('hold-text'),
   holdFill:        document.querySelector('.hold-fill'),
@@ -559,16 +500,8 @@ function applyLang() {
     if (key) btn.textContent = t(key);
   });
 
-  // Break step indicator labels
-  [[1, 'bkStep1Label', 'bkStep1Sub'],
-   [2, 'bkStep2Label', 'bkStep2Sub'],
-   [3, 'bkStep3Label', 'bkStep3Sub']].forEach(([i, lk, sk]) => {
-    dom.bstepText[i].innerHTML = `${t(lk)}<small>${t(sk)}</small>`;
-  });
-
   // Action buttons
   dom.skipBreakBtn.textContent = t('skipBreak');
-  dom.skipPhaseBtn.textContent = t('skipPhase');
   dom.holdText.textContent     = t('holdReset');
 
   // Start button based on status
@@ -613,26 +546,7 @@ function buildTimeline() {
 
   const phases = LEVELS[State.level].sections;
 
-  // Collapse consecutive break phases into single blocks
-  const collapsed = [];
-  let i = 0;
-  while (i < phases.length) {
-    if (phases[i].type === 'exam') {
-      collapsed.push({ type: 'exam', phase: phases[i] });
-      i++;
-    } else {
-      let total = 0;
-      while (i < phases.length && phases[i].type === 'break-phase') {
-        total += phases[i].duration;
-        i++;
-      }
-      collapsed.push({ type: 'break', total });
-    }
-  }
-
-  State._collapsed = collapsed;
-
-  collapsed.forEach((entry, idx) => {
+  phases.forEach((entry, idx) => {
     if (idx > 0) {
       const arrow = document.createElement('span');
       arrow.className   = 'tl-arrow';
@@ -647,13 +561,13 @@ function buildTimeline() {
     block.dataset.entryIdx = idx;
 
     if (entry.type === 'exam') {
-      const mins  = Math.round(entry.phase.duration / 60);
-      const label = t(entry.phase.tlKey || entry.phase.labelKey);
+      const mins  = Math.round(entry.duration / 60);
+      const label = t(entry.tlKey || entry.labelKey);
       const unit  = State.lang === 'ja' ? '分' : State.lang === 'vi' ? 'p' : 'm';
       block.className   = 'tl-block exam';
       block.textContent = `${label} \u00b7 ${mins}${unit}`;
     } else {
-      const mins = Math.round(entry.total / 60);
+      const mins = Math.round(entry.duration / 60);
       block.className   = 'tl-block brk';
       block.textContent = t('tlBreak', mins);
     }
@@ -666,20 +580,9 @@ function buildTimeline() {
 }
 
 function updateTimelineActive() {
-  if (State.mode !== 'full' || !State._collapsed) return;
+  if (State.mode !== 'full') return;
   const blocks = dom.timelinePreview.querySelectorAll('.tl-block');
-
-  let flatIdx = 0;
-  let activeCollIdx = 0;
-  State._collapsed.forEach((entry, ci) => {
-    const count = entry.type === 'exam' ? 1 : 3;
-    for (let j = 0; j < count; j++) {
-      if (flatIdx === State.phaseIndex) activeCollIdx = ci;
-      flatIdx++;
-    }
-  });
-
-  blocks.forEach((b, i) => b.classList.toggle('tl-active', i === activeCollIdx));
+  blocks.forEach((b, i) => b.classList.toggle('tl-active', i === State.phaseIndex));
 }
 
 // ================================================================
@@ -714,7 +617,7 @@ function startPhase(idx) {
   State.phaseStart = Date.now();
   State.endTime    = Date.now() + State.phases[idx].duration * 1000;
   State.warnFired  = false;
-  State.status     = State.phases[idx].type === 'break-phase' ? 'break' : 'running';
+  State.status     = State.phases[idx].type === 'break' ? 'break' : 'running';
   updateUI();
   cancelAnimationFrame(State.rafId);
   State.rafId = requestAnimationFrame(tick);
@@ -739,17 +642,17 @@ function tick() {
     // Live Browser Tab Title
     const phaseText = phase.type === 'exam'
       ? t(phase.labelKey)
-      : t('breakTitleFrag', t(phase.labelKey));
+      : t('bkBreak');
     document.title = t('titleRunning', formatTime(remainingSec), phaseText, State.level);
 
-    // 5-minute warning notification
+    // 5-minute warning notification (only for exam phase)
     if (!State.warnFired && remainingSec <= M(5) && remainingSec > 0 && phase.type === 'exam') {
       State.warnFired = true;
       chimeWarning();
       flashScreen();
       dom.countdown.classList.add('warning');
     }
-    if (remainingSec > M(5)) {
+    if (remainingSec > M(5) || phase.type === 'break') {
       dom.countdown.classList.remove('warning');
     }
   }
@@ -768,8 +671,8 @@ function onPhaseEnd() {
 
   if (phase.type === 'exam') {
     chimePencilsDown();
-  } else if (phase.type === 'break-phase') {
-    chimeBreakPhase();
+  } else if (phase.type === 'break') {
+    chimeStart();
   }
 
   if (nextIdx >= State.phases.length) {
@@ -798,32 +701,13 @@ function finishExam() {
 
 function skipEntireBreak() {
   cancelAnimationFrame(State.rafId);
-  let idx = State.phaseIndex;
-  while (idx < State.phases.length && State.phases[idx].type === 'break-phase') {
-    idx++;
-  }
-  if (idx >= State.phases.length) {
-    finishExam();
-    return;
-  }
-  startPhase(idx);
-  chimeStart();
-}
-
-function skipCurrentBreakPhase() {
-  cancelAnimationFrame(State.rafId);
   const nextIdx = State.phaseIndex + 1;
   if (nextIdx >= State.phases.length) {
     finishExam();
     return;
   }
-  const next = State.phases[nextIdx];
-  if (next.type === 'break-phase') {
-    chimeBreakPhase();
-  } else {
-    chimeStart();
-  }
   startPhase(nextIdx);
+  chimeStart();
 }
 
 // ================================================================
@@ -913,34 +797,25 @@ function updateUI() {
   } else {
     const phase = State.phases[State.phaseIndex];
     if (phase) {
-      dom.phaseLabel.textContent = isBreak
-        ? t('breakPhaseLabel', phase.phaseNum, t(phase.labelKey))
-        : t(phase.labelKey);
-      dom.subphaseLabel.textContent = t(phase.subLabelKey);
+      if (isBreak) {
+        const mins = Math.round(phase.duration / 60);
+        const unit = State.lang === 'ja' ? '分' : State.lang === 'vi' ? ' phút' : ' min';
+        dom.phaseLabel.textContent    = `${t('bkBreak')} (${mins}${unit})`;
+        dom.subphaseLabel.textContent = t('bkBreakSub');
+      } else {
+        dom.phaseLabel.textContent    = t(phase.labelKey);
+        dom.subphaseLabel.textContent = t(phase.subLabelKey);
+      }
     } else {
       dom.phaseLabel.textContent    = '';
       dom.subphaseLabel.textContent = '';
     }
   }
 
-  // Break phase 3-step indicator
-  if (isBreak) {
-    dom.breakSection.classList.remove('hidden');
-    const pn = phase.phaseNum;
-    for (let i = 1; i <= 3; i++) {
-      dom.bsteps[i].classList.remove('active-phase', 'done-phase');
-      if (i === pn)    dom.bsteps[i].classList.add('active-phase');
-      else if (i < pn) dom.bsteps[i].classList.add('done-phase');
-    }
-  } else {
-    dom.breakSection.classList.add('hidden');
-  }
-
   // Button visibility
   dom.startBtn.classList.toggle('hidden',     !isIdle && !isDone);
   dom.resetBtn.classList.toggle('hidden',     isIdle || isDone);
   dom.skipBreakBtn.classList.toggle('hidden', !isBreak);
-  dom.skipPhaseBtn.classList.toggle('hidden', !isBreak);
 
   dom.startBtn.textContent = isDone ? t('restartBtn') : t('startBtn');
   dom.holdText.textContent = t('holdReset');
@@ -953,8 +828,6 @@ function showDoneState() {
   dom.startBtn.textContent = t('restartBtn');
   dom.resetBtn.classList.add('hidden');
   dom.skipBreakBtn.classList.add('hidden');
-  dom.skipPhaseBtn.classList.add('hidden');
-  dom.breakSection.classList.add('hidden');
 }
 
 function lockSelectors() {
@@ -1078,9 +951,8 @@ function boot() {
     if (State.status === 'idle' || State.status === 'done') startExam();
   });
 
-  // Skip break actions
+  // Skip break action
   dom.skipBreakBtn.addEventListener('click', skipEntireBreak);
-  dom.skipPhaseBtn.addEventListener('click', skipCurrentBreakPhase);
 
   // Hold to reset
   setupHoldReset();
