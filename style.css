@@ -471,15 +471,16 @@ main {
 
 #countdown {
   font-family: var(--font-timer) !important;
-  font-size: clamp(4.6rem, 10vh, 6.8rem);
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-size: clamp(5.6rem, 12vh, 8.2rem);
+  font-weight: 800;
+  letter-spacing: -0.015em;
   font-variant-numeric: tabular-nums lining-nums;
   -webkit-font-feature-settings: "tnum" 1, "lnum" 1;
   font-feature-settings: "tnum" 1, "lnum" 1;
   line-height: 1;
+  margin: 0.55rem 0 0.65rem;
   color: #FFFFFF;
-  text-shadow: 0 0 60px rgba(255,255,255,0.22), 0 2px 24px rgba(0,0,0,0.5);
+  text-shadow: 0 0 65px rgba(255,255,255,0.26), 0 3px 24px rgba(0,0,0,0.5);
   user-select: none;
   transform: translateZ(0);
 }
@@ -760,7 +761,7 @@ main {
   .brand-card { padding: 5px 12px; border-radius: 10px; }
   .brand-logo-img { height: 34px; max-width: 135px; }
   #timer-section { padding: 1.2rem 0.9rem 1.1rem; border-radius: 18px; }
-  #countdown { font-size: clamp(3.8rem, 14vw, 5.5rem); }
+  #countdown { font-size: clamp(4.2rem, 15vw, 5.8rem); margin: 0.4rem 0 0.5rem; }
   .seg-btn { font-size: 0.8rem; padding: 0.45rem 0.3rem; }
   #level-seg .seg-btn { font-size: 0.92rem; }
   .tl-block { font-size: 0.74rem; padding: 0.28rem 0.6rem; }
