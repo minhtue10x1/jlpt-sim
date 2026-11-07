@@ -44,7 +44,7 @@
 /* ---- Reset ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html {
-  font-size: clamp(14px, 1.1vw, 16px);
+  font-size: 17px;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -141,7 +141,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.55rem 1.4rem;
+  padding: 0.85rem 1.6rem;
   background: rgba(10, 10, 20, 0.75);
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
@@ -164,8 +164,8 @@ header {
 /* ---- Brand Logo Badge (Frosted Translucent White Frame at Top-Left of Body) ---- */
 .brand-badge {
   position: absolute;
-  top: 3.8rem;
-  left: 1.8rem;
+  top: 4.8rem;
+  left: 2rem;
   z-index: 50;
   pointer-events: auto;
 }
@@ -174,14 +174,14 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 6px 14px;
+  padding: 8px 18px;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: 
-    0 4px 18px rgba(0, 0, 0, 0.25),
+    0 4px 20px rgba(0, 0, 0, 0.25),
     0 0 0 1px rgba(255, 255, 255, 0.40) inset;
   transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
   user-select: none;
@@ -191,14 +191,14 @@ header {
   background: rgba(255, 255, 255, 0.96);
   transform: translateY(-2px);
   box-shadow: 
-    0 6px 24px rgba(0, 0, 0, 0.32),
+    0 8px 28px rgba(0, 0, 0, 0.32),
     0 0 0 1px rgba(255, 255, 255, 0.60) inset;
 }
 
 .brand-logo-img {
-  height: 46px;
+  height: 60px;
   width: auto;
-  max-width: 165px;
+  max-width: 220px;
   display: block;
   object-fit: contain;
 }
@@ -271,9 +271,9 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(0.4rem, 1.2vh, 0.9rem) 1.2rem;
-  gap: clamp(0.35rem, 1vh, 0.8rem);
-  max-width: 820px;
+  padding: 2.2rem 1.4rem 4.5rem;
+  gap: 1.6rem;
+  max-width: 860px;
   margin: 0 auto;
   width: 100%;
 }
@@ -291,12 +291,12 @@ main {
 
 .selector-label {
   display: block;
-  font-size: 0.82rem;
+  font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.78);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.65rem;
   padding-left: 0.15rem;
 }
 
@@ -326,10 +326,10 @@ main {
   border: none;
   color: var(--text-muted);
   font-family: inherit;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  padding: clamp(0.35rem, 0.7vh, 0.52rem) 0.45rem;
+  padding: 0.68rem 0.5rem;
   cursor: pointer;
   transition: color var(--trs-dur) var(--trs);
   white-space: nowrap;
@@ -436,13 +436,13 @@ main {
   backdrop-filter: var(--glass-blur);
   -webkit-backdrop-filter: var(--glass-blur);
   border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  padding: clamp(0.6rem, 1.5vh, 1.1rem) clamp(1rem, 2vw, 2rem);
+  border-radius: 24px;
+  padding: 2.6rem 2.2rem 2.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(0.15rem, 0.5vh, 0.35rem);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.30);
+  gap: 0.7rem;
+  box-shadow: 0 8px 36px rgba(0,0,0,0.32);
   position: relative;
   overflow: hidden;
   transform: translateZ(0);
@@ -459,19 +459,19 @@ main {
 }
 
 #phase-label {
-  font-size: clamp(0.92rem, 1.7vw, 1.18rem);
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
   font-weight: 700;
   letter-spacing: 0.04em;
   color: #FFFFFF;
-  min-height: 1.3em;
+  min-height: 1.4em;
   text-align: center;
-  line-height: 1.35;
+  line-height: 1.4;
   text-shadow: 0 2px 14px rgba(0,0,0,0.5);
 }
 
 #countdown {
   font-family: var(--font-timer) !important;
-  font-size: clamp(3.6rem, 8.8vw, 6.2rem);
+  font-size: clamp(5.5rem, 18vw, 14rem);
   font-weight: 700;
   letter-spacing: -0.01em;
   font-variant-numeric: tabular-nums lining-nums;
@@ -479,7 +479,7 @@ main {
   font-feature-settings: "tnum" 1, "lnum" 1;
   line-height: 1;
   color: #FFFFFF;
-  text-shadow: 0 0 50px rgba(255,255,255,0.22), 0 2px 20px rgba(0,0,0,0.5);
+  text-shadow: 0 0 60px rgba(255,255,255,0.22), 0 2px 24px rgba(0,0,0,0.5);
   user-select: none;
   transform: translateZ(0);
 }
@@ -494,13 +494,13 @@ main {
 }
 
 #subphase-label {
-  font-size: clamp(0.78rem, 1.3vw, 0.92rem);
+  font-size: clamp(0.98rem, 2vw, 1.16rem);
   font-weight: 500;
   color: rgba(255,255,255,0.85);
   letter-spacing: 0.025em;
-  min-height: 1.2em;
+  min-height: 1.3em;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.5;
   max-width: 680px;
 }
 
@@ -588,17 +588,17 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.8rem;
   width: 100%;
-  max-width: 440px;
+  max-width: 420px;
   transform: translateZ(0);
 }
 
 #start-btn {
   width: 100%;
-  padding: clamp(0.65rem, 1.3vh, 0.88rem) 2rem;
+  padding: 1.05rem 2.2rem;
   font-family: inherit;
-  font-size: 0.98rem;
+  font-size: 1.1rem;
   font-weight: 800;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -615,9 +615,9 @@ main {
 
 #skip-break-btn {
   width: 100%;
-  padding: 0.62rem 1.6rem;
+  padding: 0.95rem 1.8rem;
   font-family: inherit;
-  font-size: 0.92rem;
+  font-size: 1.02rem;
   font-weight: 800;
   letter-spacing: 0.07em;
   text-transform: uppercase;
@@ -634,9 +634,9 @@ main {
 
 .secondary-btn {
   width: 100%;
-  padding: 0.52rem 1.2rem;
+  padding: 0.72rem 1.2rem;
   font-family: inherit;
-  font-size: 0.82rem;
+  font-size: 0.9rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -706,46 +706,45 @@ main {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 2px; }
 
-/* ---- Footer Credit Bar (Docked right below controls) ---- */
+/* ---- Fixed Bottom Footer Bar (Always visible at the bottom of the viewport) ---- */
 #app-footer {
-  position: relative;
-  z-index: 10;
-  width: 100%;
-  max-width: 440px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.35rem 0.9rem;
-  background: rgba(14, 14, 26, 0.65);
-  backdrop-filter: var(--glass-blur-sm);
-  -webkit-backdrop-filter: var(--glass-blur-sm);
-  border: 1px solid var(--glass-border-dim);
-  border-radius: var(--radius-sm);
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.20);
-  margin-top: 0.1rem;
+  padding: 0.55rem 1.2rem;
+  background: rgba(10, 10, 22, 0.85);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-top: 1px solid var(--glass-border-dim);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.40);
   user-select: none;
-  flex-shrink: 0;
+  transform: translateZ(0);
 }
 
 .footer-credit {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.7rem;
   flex-wrap: wrap;
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   font-weight: 500;
-  letter-spacing: 0.035em;
-  color: rgba(255, 255, 255, 0.50);
-  line-height: 1.3;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.4;
 }
 
 .footer-credit .footer-sep {
-  opacity: 0.35;
+  opacity: 0.4;
 }
 
 .footer-credit .footer-link {
-  color: rgba(255, 255, 255, 0.78);
+  color: rgba(255, 255, 255, 0.85);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease, text-decoration 0.2s ease;
@@ -754,7 +753,7 @@ main {
 .footer-credit .footer-link:hover {
   color: #FFFFFF;
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
 }
 
 /* ---- Responsive ---- */
@@ -763,35 +762,35 @@ main {
     position: relative;
     top: auto;
     left: auto;
-    max-width: 820px;
-    margin: 0.4rem auto 0;
-    padding: 0 1.2rem;
+    max-width: 860px;
+    margin: 1.4rem auto 0;
+    padding: 0 1.4rem;
     width: 100%;
     display: flex;
     justify-content: flex-start;
   }
   .brand-logo-img {
-    height: 38px;
+    height: 48px;
   }
   main {
-    padding-top: 0.5rem;
+    padding-top: 1.2rem;
   }
 }
 
 @media (max-width: 540px) {
-  html { font-size: 14px; }
-  main { padding: 0.5rem 0.8rem 1rem; gap: 0.6rem; }
-  .brand-badge { margin-top: 0.4rem; padding: 0 0.8rem; }
-  .brand-card { padding: 5px 12px; border-radius: 10px; }
-  .brand-logo-img { height: 32px; max-width: 130px; }
-  #timer-section { padding: 1rem 0.85rem 0.95rem; border-radius: 18px; }
-  .seg-btn { font-size: 0.78rem; padding: 0.42rem 0.25rem; }
-  #level-seg .seg-btn { font-size: 0.88rem; }
-  .tl-block { font-size: 0.7rem; padding: 0.22rem 0.5rem; }
-  #break-phase-section { padding: 0.9rem 0.75rem; }
-  .break-step-line { max-width: 26px; margin-bottom: 1.6rem; }
-  header { padding: 0.45rem 0.9rem; }
-  #header-controls { gap: 0.35rem; }
-  #app-footer { padding: 0.3rem 0.6rem; }
-  .footer-credit { font-size: 0.68rem; gap: 0.35rem; }
+  html { font-size: 15px; }
+  main { padding: 1.4rem 0.9rem 4.5rem; gap: 1.2rem; }
+  .brand-badge { margin-top: 1rem; padding: 0 0.9rem; }
+  .brand-card { padding: 6px 14px; border-radius: 12px; }
+  .brand-logo-img { height: 40px; max-width: 150px; }
+  #timer-section { padding: 1.8rem 1.1rem 1.6rem; border-radius: 20px; }
+  .seg-btn { font-size: 0.85rem; padding: 0.52rem 0.35rem; }
+  #level-seg .seg-btn { font-size: 0.98rem; }
+  .tl-block { font-size: 0.78rem; padding: 0.32rem 0.65rem; }
+  #break-phase-section { padding: 1.2rem 1rem; }
+  .break-step-line { max-width: 32px; margin-bottom: 2rem; }
+  header { padding: 0.65rem 1rem; }
+  #header-controls { gap: 0.45rem; }
+  #app-footer { padding: 0.45rem 0.8rem; }
+  .footer-credit { font-size: 0.74rem; gap: 0.45rem; }
 }
