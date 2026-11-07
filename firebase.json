@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "jlptsim",
     "public": ".",
     "ignore": [
       "firebase.json",
@@ -19,4 +20,3 @@
     ]
   }
 }
-
