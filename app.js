@@ -771,7 +771,7 @@ function resetAll() {
   State.endTime = null;
   State.phases = [];
   State.phaseIndex = 0;
-  dom.countdown.classList.remove('warning', 'paused');
+  dom.countdown.classList.remove('warning', 'paused', 'running');
   dom.progressFill.style.width = '0%';
   document.title = t('titleIdle');
   unlockSelectors();
@@ -838,13 +838,13 @@ function updateUI() {
       dom.subphaseLabel.textContent = '';
       dom.countdown.textContent = '00:00';
     }
-    dom.countdown.classList.remove('warning', 'paused');
+    dom.countdown.classList.remove('warning', 'paused', 'running');
     dom.progressFill.style.width = '0%';
   } else if (isDone) {
     dom.phaseLabel.textContent = t('examComplete');
     dom.countdown.textContent = '00:00';
     dom.subphaseLabel.textContent = '';
-    dom.countdown.classList.remove('warning', 'paused');
+    dom.countdown.classList.remove('warning', 'paused', 'running');
   } else {
     const phase = State.phases[State.phaseIndex];
     if (phase) {
@@ -866,6 +866,8 @@ function updateUI() {
       dom.subphaseLabel.textContent = '';
     }
 
+    const isRunning = (State.status === 'running' || State.status === 'break') && !isPaused;
+    dom.countdown.classList.toggle('running', isRunning);
     dom.countdown.classList.toggle('paused', isPaused);
 
     if (isPaused) {
