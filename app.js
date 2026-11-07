@@ -65,6 +65,8 @@ const I18N = {
     tlLangReading: 'KT Ngôn ngữ & Đọc',
     tlListening: 'Nghe hiểu',
     tlBreak: mins => `Giải lao \u00b7 ${mins}p`,
+    tlClickToSelect: 'Bấm để chọn bắt đầu từ phần này',
+    confirmJumpPhase: name => `Chuyển ngay sang "${name}"?\nThời gian của phần hiện tại sẽ kết thúc.`,
     // Formatted strings
     titleDone: lvl => `Hoàn thành bài thi \u2014 JLPT ${lvl}`,
     titleIdle: 'Đồng hồ thi JLPT — Mô phỏng chuẩn JEES (N1-N5)',
@@ -126,6 +128,8 @@ const I18N = {
     tlLangReading: 'Lang. Knowledge & Reading',
     tlListening: 'Listening',
     tlBreak: mins => `Break \u00b7 ${mins}m`,
+    tlClickToSelect: 'Click to start from this phase',
+    confirmJumpPhase: name => `Switch to "${name}" now?\nThe current section will end.`,
     // Formatted strings
     titleDone: lvl => `Exam Complete \u2014 JLPT ${lvl}`,
     titleIdle: 'JLPT Exam Timer — Official JEES Timing Simulation (N1-N5)',
@@ -187,6 +191,8 @@ const I18N = {
     tlLangReading: '言語知識・読解',
     tlListening: '聴解',
     tlBreak: mins => `休憩 \u00b7 ${mins}分`,
+    tlClickToSelect: 'クリックしてこの科目から開始',
+    confirmJumpPhase: name => `「${name}」に今すぐ切り替えますか？\n現在の科目の計測は終了します。`,
     // フォーマット文字列
     titleDone: lvl => `試験終了 \u2014 JLPT ${lvl}`,
     titleIdle: 'JLPT 模擬タイマー — JEES 公式本試験仕様 (N1-N5)',
@@ -295,6 +301,7 @@ const State = {
   remainingOnPause: 0,
   phases: [],
   phaseIndex: 0,
+  startPhaseIndex: 0,
   endTime: null,
   phaseStart: null,
   rafId: null,
@@ -572,20 +579,25 @@ function buildTimeline() {
     const item = document.createElement('div');
     item.className = 'tl-item';
 
-    const block = document.createElement('div');
+    const block = document.createElement('button');
+    block.type = 'button';
     block.dataset.entryIdx = idx;
 
+    const unit = State.lang === 'ja' ? '分' : State.lang === 'vi' ? 'p' : 'm';
     if (entry.type === 'exam') {
       const mins = Math.round(entry.duration / 60);
       const label = t(entry.tlKey || entry.labelKey);
-      const unit = State.lang === 'ja' ? '分' : State.lang === 'vi' ? 'p' : 'm';
       block.className = 'tl-block exam';
       block.textContent = `${label} \u00b7 ${mins}${unit}`;
+      block.title = `${t(entry.labelKey)} — ${t('tlClickToSelect')}`;
     } else {
       const mins = Math.round(entry.duration / 60);
       block.className = 'tl-block brk';
       block.textContent = t('tlBreak', mins);
+      block.title = `${t('bkBreak')} (${mins}${unit}) — ${t('tlClickToSelect')}`;
     }
+
+    block.addEventListener('click', () => onTimelineBlockClick(idx));
 
     item.appendChild(block);
     preview.appendChild(item);
@@ -596,8 +608,43 @@ function buildTimeline() {
 
 function updateTimelineActive() {
   if (State.mode !== 'full') return;
+  const activeIdx = State.status === 'idle' ? (State.startPhaseIndex || 0) : State.phaseIndex;
   const blocks = dom.timelinePreview.querySelectorAll('.tl-block');
-  blocks.forEach((b, i) => b.classList.toggle('tl-active', i === State.phaseIndex));
+  blocks.forEach((b, i) => b.classList.toggle('tl-active', i === activeIdx));
+}
+
+function onTimelineBlockClick(idx) {
+  if (State.mode !== 'full') return;
+  const phases = resolvePhases();
+  if (idx < 0 || idx >= phases.length) return;
+  const targetPhase = phases[idx];
+  const unit = State.lang === 'ja' ? '分' : State.lang === 'vi' ? ' phút' : ' min';
+  const targetName = targetPhase.type === 'break'
+    ? `${t('bkBreak')} (${Math.round(targetPhase.duration / 60)}${unit})`
+    : t(targetPhase.labelKey);
+
+  // When idle or done: select starting phase
+  if (State.status === 'idle' || State.status === 'done') {
+    if (State.status === 'done') State.status = 'idle';
+    State.startPhaseIndex = idx;
+    updateUI();
+    updateTimelineActive();
+    return;
+  }
+
+  // Already on this phase
+  if (State.phaseIndex === idx) return;
+
+  // Currently running or paused: confirm before switching
+  const confirmed = confirm(t('confirmJumpPhase', targetName));
+  if (!confirmed) return;
+
+  ensureAudio();
+  if (!State.phases || !State.phases.length) {
+    State.phases = resolvePhases();
+  }
+  startPhase(idx);
+  chimeStart();
 }
 
 // ================================================================
@@ -616,10 +663,11 @@ function resolvePhases() {
 function startExam() {
   ensureAudio();
   State.phases = resolvePhases();
-  State.phaseIndex = 0;
+  const startIdx = Math.min(State.startPhaseIndex || 0, Math.max(0, State.phases.length - 1));
+  State.phaseIndex = startIdx;
   State.warnFired = false;
   if (!State.phases.length) return;
-  startPhase(0);
+  startPhase(startIdx);
   lockSelectors();
   chimeStart();
 }
@@ -771,6 +819,7 @@ function resetAll() {
   State.endTime = null;
   State.phases = [];
   State.phaseIndex = 0;
+  State.startPhaseIndex = 0;
   dom.countdown.classList.remove('warning', 'paused', 'running');
   dom.progressFill.style.width = '0%';
   document.title = t('titleIdle');
@@ -828,11 +877,19 @@ function updateUI() {
 
   if (isIdle) {
     const upcoming = resolvePhases();
-    const firstPhase = upcoming.length > 0 ? upcoming[0] : null;
-    if (firstPhase) {
-      dom.phaseLabel.textContent = t(firstPhase.labelKey);
-      dom.subphaseLabel.textContent = t(firstPhase.subLabelKey);
-      dom.countdown.textContent = formatTime(firstPhase.duration);
+    const idx = Math.min(State.startPhaseIndex || 0, Math.max(0, upcoming.length - 1));
+    const chosenPhase = upcoming.length > 0 ? upcoming[idx] : null;
+    if (chosenPhase) {
+      if (chosenPhase.type === 'break') {
+        const mins = Math.round(chosenPhase.duration / 60);
+        const unit = State.lang === 'ja' ? '分' : State.lang === 'vi' ? ' phút' : ' min';
+        dom.phaseLabel.textContent = `${t('bkBreak')} (${mins}${unit})`;
+        dom.subphaseLabel.textContent = t('bkBreakSub');
+      } else {
+        dom.phaseLabel.textContent = t(chosenPhase.labelKey);
+        dom.subphaseLabel.textContent = t(chosenPhase.subLabelKey);
+      }
+      dom.countdown.textContent = formatTime(chosenPhase.duration);
     } else {
       dom.phaseLabel.textContent = '';
       dom.subphaseLabel.textContent = '';
@@ -995,6 +1052,7 @@ function boot() {
   // Switching level automatically resets mode back to Full Exam
   levelCtrl = initSegmented(dom.levelSeg, dom.levelPill, (val) => {
     State.level = val;
+    State.startPhaseIndex = 0;
     if (State.status === 'done') State.status = 'idle';
     updateModeOptions();
     modeCtrl.select('full');
@@ -1008,6 +1066,7 @@ function boot() {
   // Initialize Mode selector
   modeCtrl = initSegmented(dom.modeSeg, dom.modePill, (val) => {
     State.mode = val;
+    State.startPhaseIndex = 0;
     if (State.status === 'done') State.status = 'idle';
     buildTimeline();
     updateModeOptions();

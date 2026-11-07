@@ -418,7 +418,24 @@ main {
   padding: 0.35rem 0.9rem;
   border-radius: 20px;
   white-space: nowrap;
-  transition: background var(--trs-dur) var(--trs), color var(--trs-dur) var(--trs);
+  cursor: pointer;
+  outline: none;
+  border: none;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: background var(--trs-dur) var(--trs),
+    color var(--trs-dur) var(--trs),
+    border-color var(--trs-dur) var(--trs),
+    transform 0.12s var(--trs),
+    box-shadow var(--trs-dur) var(--trs);
+}
+
+.tl-block:hover {
+  transform: translateY(-1px);
+}
+
+.tl-block:active {
+  transform: translateY(0);
 }
 
 .tl-block.exam {
@@ -429,10 +446,24 @@ main {
   -webkit-backdrop-filter: var(--glass-blur-sm);
 }
 
+.tl-block.exam:hover {
+  background: var(--glass-bg-hover);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.40);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
 .tl-block.brk {
   background: transparent;
   border: 1px solid var(--glass-border-dim);
   color: var(--text-muted);
+}
+
+.tl-block.brk:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.20);
 }
 
 .tl-block.tl-active {
@@ -441,6 +472,12 @@ main {
   border-color: transparent;
   box-shadow: var(--pill-shadow);
   font-weight: 700;
+}
+
+.tl-block.tl-active:hover {
+  background: #FFFFFF;
+  color: #000000;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.35);
 }
 
 .tl-arrow {
