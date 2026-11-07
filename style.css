@@ -493,6 +493,15 @@ main {
   50%       { opacity: 0.50; }
 }
 
+#countdown.paused {
+  opacity: 0.70;
+  animation: pulse-pause 2.2s ease-in-out infinite;
+}
+@keyframes pulse-pause {
+  0%, 100% { opacity: 0.72; }
+  50%      { opacity: 0.38; }
+}
+
 #subphase-label {
   font-size: clamp(0.98rem, 2vw, 1.16rem);
   font-weight: 500;
@@ -552,6 +561,52 @@ main {
 }
 #skip-break-btn:hover  { opacity: 0.90; transform: translateY(-1px); }
 #skip-break-btn:active { opacity: 1;    transform: translateY(0); }
+
+#pause-btn {
+  width: 100%;
+  padding: 0.85rem 1.8rem;
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur-sm);
+  -webkit-backdrop-filter: var(--glass-blur-sm);
+  color: rgba(255, 255, 255, 0.90);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  transition: all var(--trs-dur) var(--trs);
+}
+#pause-btn:hover {
+  background: var(--glass-bg-hover);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.40);
+  transform: translateY(-1px);
+}
+#pause-btn:active {
+  transform: translateY(0);
+}
+
+/* When in paused state, pause-btn turns into the prominent primary resume action */
+#pause-btn.resuming {
+  background: rgba(255, 255, 255, 0.95);
+  color: #0A0A0A;
+  font-weight: 800;
+  box-shadow: 0 4px 22px rgba(255, 255, 255, 0.25), 0 4px 20px rgba(0, 0, 0, 0.35);
+  animation: pulse-resume 2s ease-in-out infinite;
+}
+#pause-btn.resuming:hover {
+  background: #FFFFFF;
+  opacity: 0.95;
+  color: #000000;
+}
+@keyframes pulse-resume {
+  0%, 100% { box-shadow: 0 4px 22px rgba(255, 255, 255, 0.25), 0 4px 20px rgba(0, 0, 0, 0.35); }
+  50%      { box-shadow: 0 4px 30px rgba(255, 255, 255, 0.45), 0 6px 24px rgba(0, 0, 0, 0.45); }
+}
 
 .secondary-btn {
   width: 100%;

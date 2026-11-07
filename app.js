@@ -13,22 +13,22 @@
 const I18N = {
   // ── Tiếng Việt (Thuật ngữ chuẩn theo các kỳ thi JLPT tại Việt Nam) ──
   vi: {
-    appTitle:    'JLPT Timer',
-    levelLabel:  'Cấp độ JLPT',
-    modeLabel:   'Chế độ luyện thi',
+    appTitle: 'JLPT Timer',
+    levelLabel: 'Cấp độ JLPT',
+    modeLabel: 'Chế độ luyện thi',
     // Mode selector buttons
-    mFull:        'Thi thử trọn bộ',
-    mSec1:        'Cả Phần 1',
-    mVocabOnly:   'Chỉ Từ vựng',
+    mFull: 'Thi thử trọn bộ',
+    mSec1: 'Cả Phần 1',
+    mVocabOnly: 'Chỉ Từ vựng',
     mReadingOnly: 'Chỉ Đọc hiểu',
-    mVocab:       'Từ vựng',
-    mGrammar:     'Ngữ pháp & Đọc',
-    mListening:   'Nghe hiểu',
+    mVocab: 'Từ vựng',
+    mGrammar: 'Ngữ pháp & Đọc',
+    mListening: 'Nghe hiểu',
     // Section names
-    secLangKnowledgeReading:        'Kiến thức ngôn ngữ (Từ vựng・Ngữ pháp) & Đọc hiểu',
-    secLangKnowledgeVocab:          'Kiến thức ngôn ngữ (Chữ Hán・Từ vựng)',
+    secLangKnowledgeReading: 'Kiến thức ngôn ngữ (Từ vựng・Ngữ pháp) & Đọc hiểu',
+    secLangKnowledgeVocab: 'Kiến thức ngôn ngữ (Chữ Hán・Từ vựng)',
     secLangKnowledgeGrammarReading: 'Kiến thức ngôn ngữ (Ngữ pháp) & Đọc hiểu',
-    secListening:                   'Nghe hiểu',
+    secListening: 'Nghe hiểu',
     // Section sub-labels
     subVocabGrammarReading: 'Chữ Hán · Từ vựng · Ngữ pháp · Đọc hiểu',
     sub2of2: 'Phần thi 2/2',
@@ -36,56 +36,60 @@ const I18N = {
     sub2of3: 'Phần thi 2/3',
     sub3of3: 'Phần thi 3/3',
     // Individual mode sub-labels
-    indN1VocabOnly:    'N1 — Chỉ luyện Từ vựng & Ngữ pháp (~40 phút)',
-    indN1ReadingOnly:  'N1 — Chỉ luyện Đọc hiểu (~70 phút)',
-    indN2VocabOnly:    'N2 — Chỉ luyện Từ vựng & Ngữ pháp (~40 phút)',
-    indN2ReadingOnly:  'N2 — Chỉ luyện Đọc hiểu (~65 phút)',
-    indN1VocabApprox:  'N1 — Phân chia thời gian: 40 phút đầu',
-    indN1ReadingApprox:'N1 — Phân chia thời gian: 70 phút sau',
-    indN2VocabApprox:  'N2 — Phân chia thời gian: 40 phút đầu',
-    indN2ReadingApprox:'N2 — Phân chia thời gian: 65 phút sau',
+    indN1VocabOnly: 'N1 — Chỉ luyện Từ vựng & Ngữ pháp (~40 phút)',
+    indN1ReadingOnly: 'N1 — Chỉ luyện Đọc hiểu (~70 phút)',
+    indN2VocabOnly: 'N2 — Chỉ luyện Từ vựng & Ngữ pháp (~40 phút)',
+    indN2ReadingOnly: 'N2 — Chỉ luyện Đọc hiểu (~65 phút)',
+    indN1VocabApprox: 'N1 — Phân chia thời gian: 40 phút đầu',
+    indN1ReadingApprox: 'N1 — Phân chia thời gian: 70 phút sau',
+    indN2VocabApprox: 'N2 — Phân chia thời gian: 40 phút đầu',
+    indN2ReadingApprox: 'N2 — Phân chia thời gian: 65 phút sau',
     indSec1: 'Phần thi 1',
     indSec2: 'Phần thi 2',
     indSec3: 'Phần thi 3',
     // Break
-    bkBreak:         'Nghỉ giải lao',
-    bkBreakSub:      'Thời gian nghỉ ngơi thư giãn · Nhấn "Bỏ qua giải lao" để làm tiếp phần tiếp theo ngay',
+    bkBreak: 'Nghỉ giải lao',
+    bkBreakSub: 'Thời gian nghỉ ngơi thư giãn · Nhấn "Bỏ qua giải lao" để làm tiếp phần tiếp theo ngay',
     // Controls & Actions
-    startBtn:    'Bắt đầu làm bài',
-    restartBtn:  'Thi lại từ đầu',
-    holdReset:   'Nhấn giữ để đặt lại',
-    skipBreak:   'Bỏ qua giải lao — Vào thi phần tiếp theo \u2192',
+    startBtn: 'Bắt đầu làm bài',
+    restartBtn: 'Thi lại từ đầu',
+    pauseBtn: 'Tạm dừng',
+    resumeBtn: 'Tiếp tục làm bài',
+    pausedNotice: 'Đang tạm dừng · Bấm "Tiếp tục làm bài" hoặc phím Cách (Space) để tiếp tục tính giờ',
+    holdReset: 'Nhấn giữ để đặt lại',
+    skipBreak: 'Bỏ qua giải lao — Vào thi phần tiếp theo \u2192',
     examComplete: 'Chúc mừng bạn đã hoàn thành bài thi!',
     // Timeline preview labels
-    tlVocab:       'Từ vựng',
-    tlGrammar:     'Ngữ pháp & Đọc',
+    tlVocab: 'Từ vựng',
+    tlGrammar: 'Ngữ pháp & Đọc',
     tlLangReading: 'KT Ngôn ngữ & Đọc',
-    tlListening:   'Nghe hiểu',
-    tlBreak:       mins => `Giải lao \u00b7 ${mins}p`,
+    tlListening: 'Nghe hiểu',
+    tlBreak: mins => `Giải lao \u00b7 ${mins}p`,
     // Formatted strings
-    titleDone:       lvl        => `Hoàn thành bài thi \u2014 JLPT ${lvl}`,
-    titleIdle:       'Đồng hồ thi JLPT — Mô phỏng chuẩn JEES (N1-N5)',
-    titleRunning:    (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
+    titleDone: lvl => `Hoàn thành bài thi \u2014 JLPT ${lvl}`,
+    titleIdle: 'Đồng hồ thi JLPT — Mô phỏng chuẩn JEES (N1-N5)',
+    titleRunning: (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
+    titlePaused: (time, phase, lvl) => `[Tạm dừng] [${time}] ${phase} \u2014 JLPT ${lvl}`,
   },
 
   // ── English (Official JLPT.jp Standards) ─────────────────────
   en: {
-    appTitle:    'JLPT Timer',
-    levelLabel:  'JLPT Level',
-    modeLabel:   'Exam Mode',
+    appTitle: 'JLPT Timer',
+    levelLabel: 'JLPT Level',
+    modeLabel: 'Exam Mode',
     // Mode selector buttons
-    mFull:        'Full Mock Exam',
-    mSec1:        'Section 1 (Full)',
-    mVocabOnly:   'Vocab Only',
+    mFull: 'Full Mock Exam',
+    mSec1: 'Section 1 (Full)',
+    mVocabOnly: 'Vocab Only',
     mReadingOnly: 'Reading Only',
-    mVocab:       'Vocabulary',
-    mGrammar:     'Grammar & Reading',
-    mListening:   'Listening',
+    mVocab: 'Vocabulary',
+    mGrammar: 'Grammar & Reading',
+    mListening: 'Listening',
     // Section names
-    secLangKnowledgeReading:        'Language Knowledge (Vocab./Grammar) & Reading',
-    secLangKnowledgeVocab:          'Language Knowledge (Vocabulary)',
+    secLangKnowledgeReading: 'Language Knowledge (Vocab./Grammar) & Reading',
+    secLangKnowledgeVocab: 'Language Knowledge (Vocabulary)',
     secLangKnowledgeGrammarReading: 'Language Knowledge (Grammar) & Reading',
-    secListening:                   'Listening',
+    secListening: 'Listening',
     // Section sub-labels
     subVocabGrammarReading: 'Characters · Vocabulary · Grammar · Reading',
     sub2of2: 'Section 2 of 2',
@@ -93,56 +97,60 @@ const I18N = {
     sub2of3: 'Section 2 of 3',
     sub3of3: 'Section 3 of 3',
     // Individual mode sub-labels
-    indN1VocabOnly:    'N1 — Vocabulary & Grammar section only (~40 min)',
-    indN1ReadingOnly:  'N1 — Reading section only (~70 min)',
-    indN2VocabOnly:    'N2 — Vocabulary & Grammar section only (~40 min)',
-    indN2ReadingOnly:  'N2 — Reading section only (~65 min)',
-    indN1VocabApprox:  'N1 — Recommended split: First 40 min',
-    indN1ReadingApprox:'N1 — Recommended split: Last 70 min',
-    indN2VocabApprox:  'N2 — Recommended split: First 40 min',
-    indN2ReadingApprox:'N2 — Recommended split: Last 65 min',
+    indN1VocabOnly: 'N1 — Vocabulary & Grammar section only (~40 min)',
+    indN1ReadingOnly: 'N1 — Reading section only (~70 min)',
+    indN2VocabOnly: 'N2 — Vocabulary & Grammar section only (~40 min)',
+    indN2ReadingOnly: 'N2 — Reading section only (~65 min)',
+    indN1VocabApprox: 'N1 — Recommended split: First 40 min',
+    indN1ReadingApprox: 'N1 — Recommended split: Last 70 min',
+    indN2VocabApprox: 'N2 — Recommended split: First 40 min',
+    indN2ReadingApprox: 'N2 — Recommended split: Last 65 min',
     indSec1: 'Section 1',
     indSec2: 'Section 2',
     indSec3: 'Section 3',
     // Break
-    bkBreak:         'Break / Intermission',
-    bkBreakSub:      'Rest between sections · Click "Skip Break" to proceed to the next section immediately',
+    bkBreak: 'Break / Intermission',
+    bkBreakSub: 'Rest between sections · Click "Skip Break" to proceed to the next section immediately',
     // Controls & Actions
-    startBtn:    'Start Exam',
-    restartBtn:  'Restart Exam',
-    holdReset:   'Hold to Reset',
-    skipBreak:   'Skip Break — Start Next Section \u2192',
+    startBtn: 'Start Exam',
+    restartBtn: 'Restart Exam',
+    pauseBtn: 'Pause',
+    resumeBtn: 'Resume Exam',
+    pausedNotice: 'Timer paused · Click "Resume Exam" or press Space to continue',
+    holdReset: 'Hold to Reset',
+    skipBreak: 'Skip Break — Start Next Section \u2192',
     examComplete: 'Exam Complete — Well Done!',
     // Timeline preview labels
-    tlVocab:       'Vocabulary',
-    tlGrammar:     'Grammar & Reading',
+    tlVocab: 'Vocabulary',
+    tlGrammar: 'Grammar & Reading',
     tlLangReading: 'Lang. Knowledge & Reading',
-    tlListening:   'Listening',
-    tlBreak:       mins => `Break \u00b7 ${mins}m`,
+    tlListening: 'Listening',
+    tlBreak: mins => `Break \u00b7 ${mins}m`,
     // Formatted strings
-    titleDone:       lvl        => `Exam Complete \u2014 JLPT ${lvl}`,
-    titleIdle:       'JLPT Exam Timer — Official JEES Timing Simulation (N1-N5)',
-    titleRunning:    (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
+    titleDone: lvl => `Exam Complete \u2014 JLPT ${lvl}`,
+    titleIdle: 'JLPT Exam Timer — Official JEES Timing Simulation (N1-N5)',
+    titleRunning: (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
+    titlePaused: (time, phase, lvl) => `[PAUSED] [${time}] ${phase} \u2014 JLPT ${lvl}`,
   },
 
   // ── 日本語 (JLPT公式サイト jlpt.jp およびJEES実施要項の正式名称) ──
   ja: {
-    appTitle:    'JLPT タイマー',
-    levelLabel:  '受験レベル',
-    modeLabel:   '試験モード',
+    appTitle: 'JLPT タイマー',
+    levelLabel: '受験レベル',
+    modeLabel: '試験モード',
     // Mode selector buttons
-    mFull:        '本番模擬（全科目）',
-    mSec1:        '第1科目（通し）',
-    mVocabOnly:   '語彙のみ',
+    mFull: '本番模擬（全科目）',
+    mSec1: '第1科目（通し）',
+    mVocabOnly: '語彙のみ',
     mReadingOnly: '読解のみ',
-    mVocab:       '文字・語彙',
-    mGrammar:     '文法・読解',
-    mListening:   '聴解',
+    mVocab: '文字・語彙',
+    mGrammar: '文法・読解',
+    mListening: '聴解',
     // 科目名（公式表記）
-    secLangKnowledgeReading:        '言語知識（文字・語彙・文法）・読解',
-    secLangKnowledgeVocab:          '言語知識（文字・語彙）',
+    secLangKnowledgeReading: '言語知識（文字・語彙・文法）・読解',
+    secLangKnowledgeVocab: '言語知識（文字・語彙）',
     secLangKnowledgeGrammarReading: '言語知識（文法）・読解',
-    secListening:                   '聴解',
+    secListening: '聴解',
     // 科目詳細
     subVocabGrammarReading: '文字・語彙・文法・読解（通し実施）',
     sub2of2: '第2科目（全2科目）',
@@ -150,36 +158,40 @@ const I18N = {
     sub2of3: '第2科目（全3科目）',
     sub3of3: '第3科目（全3科目）',
     // 個別練習モード
-    indN1VocabOnly:    'N1 — 語彙・文法パートのみ（約40分目安）',
-    indN1ReadingOnly:  'N1 — 読解パートのみ（約70分目安）',
-    indN2VocabOnly:    'N2 — 語彙・文法パートのみ（約40分目安）',
-    indN2ReadingOnly:  'N2 — 読解パートのみ（約65分目安）',
-    indN1VocabApprox:  'N1時間配分目安：前半40分',
-    indN1ReadingApprox:'N1時間配分目安：後半70分',
-    indN2VocabApprox:  'N2時間配分目安：前半40分',
-    indN2ReadingApprox:'N2時間配分目安：後半65分',
+    indN1VocabOnly: 'N1 — 語彙・文法パートのみ（約40分目安）',
+    indN1ReadingOnly: 'N1 — 読解パートのみ（約70分目安）',
+    indN2VocabOnly: 'N2 — 語彙・文法パートのみ（約40分目安）',
+    indN2ReadingOnly: 'N2 — 読解パートのみ（約65分目安）',
+    indN1VocabApprox: 'N1時間配分目安：前半40分',
+    indN1ReadingApprox: 'N1時間配分目安：後半70分',
+    indN2VocabApprox: 'N2時間配分目安：前半40分',
+    indN2ReadingApprox: 'N2時間配分目安：後半65分',
     indSec1: '第1科目',
     indSec2: '第2科目',
     indSec3: '第3科目',
     // Break
-    bkBreak:         '休憩時間',
-    bkBreakSub:      '科目間の休憩時間です · 次の科目を開始する場合は「休憩をスキップ」を押してください',
+    bkBreak: '休憩時間',
+    bkBreakSub: '科目間の休憩時間です · 次の科目を開始する場合は「休憩をスキップ」を押してください',
     // コントロール
-    startBtn:    '試験開始',
-    restartBtn:  '最初からやり直す',
-    holdReset:   '長押しでリセット',
-    skipBreak:   '休憩をスキップして次の科目へ \u2192',
+    startBtn: '試験開始',
+    restartBtn: '最初からやり直す',
+    pauseBtn: '一時停止',
+    resumeBtn: '試験を再開する',
+    pausedNotice: '一時停止中 · 「再開」ボタンまたはスペースキーで計測を再開します',
+    holdReset: '長押しでリセット',
+    skipBreak: '休憩をスキップして次の科目へ \u2192',
     examComplete: 'お疲れ様でした！試験終了です',
     // タイムライン表記
-    tlVocab:       '文字・語彙',
-    tlGrammar:     '文法・読解',
+    tlVocab: '文字・語彙',
+    tlGrammar: '文法・読解',
     tlLangReading: '言語知識・読解',
-    tlListening:   '聴解',
-    tlBreak:       mins => `休憩 \u00b7 ${mins}分`,
+    tlListening: '聴解',
+    tlBreak: mins => `休憩 \u00b7 ${mins}分`,
     // フォーマット文字列
-    titleDone:       lvl        => `試験終了 \u2014 JLPT ${lvl}`,
-    titleIdle:       'JLPT 模擬タイマー — JEES 公式本試験仕様 (N1-N5)',
-    titleRunning:    (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
+    titleDone: lvl => `試験終了 \u2014 JLPT ${lvl}`,
+    titleIdle: 'JLPT 模擬タイマー — JEES 公式本試験仕様 (N1-N5)',
+    titleRunning: (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
+    titlePaused: (time, phase, lvl) => `[一時停止] [${time}] ${phase} \u2014 JLPT ${lvl}`,
   },
 };
 
@@ -198,73 +210,73 @@ const LEVELS = {
     sections: [
       { type: 'exam', labelKey: 'secLangKnowledgeReading', tlKey: 'tlLangReading', subLabelKey: 'subVocabGrammarReading', duration: M(110) },
       BREAK_30,
-      { type: 'exam', labelKey: 'secListening',            tlKey: 'tlListening',   subLabelKey: 'sub2of2',                 duration: M(55)  },
+      { type: 'exam', labelKey: 'secListening', tlKey: 'tlListening', subLabelKey: 'sub2of2', duration: M(55) },
     ],
     individual: {
-      sec1:         { labelKey: 'secLangKnowledgeReading',        subLabelKey: 'subVocabGrammarReading', duration: M(110) },
-      vocab_only:   { labelKey: 'secLangKnowledgeVocab',          subLabelKey: 'indN1VocabOnly',         duration: M(40) },
-      reading_only: { labelKey: 'secLangKnowledgeGrammarReading', subLabelKey: 'indN1ReadingOnly',       duration: M(70) },
-      listening:    { labelKey: 'secListening',                   subLabelKey: 'indSec2',                duration: M(55) },
+      sec1: { labelKey: 'secLangKnowledgeReading', subLabelKey: 'subVocabGrammarReading', duration: M(110) },
+      vocab_only: { labelKey: 'secLangKnowledgeVocab', subLabelKey: 'indN1VocabOnly', duration: M(40) },
+      reading_only: { labelKey: 'secLangKnowledgeGrammarReading', subLabelKey: 'indN1ReadingOnly', duration: M(70) },
+      listening: { labelKey: 'secListening', subLabelKey: 'indSec2', duration: M(55) },
     },
   },
   N2: {
     sections: [
       { type: 'exam', labelKey: 'secLangKnowledgeReading', tlKey: 'tlLangReading', subLabelKey: 'subVocabGrammarReading', duration: M(105) },
       BREAK_30,
-      { type: 'exam', labelKey: 'secListening',            tlKey: 'tlListening',   subLabelKey: 'sub2of2',                 duration: M(50)  },
+      { type: 'exam', labelKey: 'secListening', tlKey: 'tlListening', subLabelKey: 'sub2of2', duration: M(50) },
     ],
     individual: {
-      sec1:         { labelKey: 'secLangKnowledgeReading',        subLabelKey: 'subVocabGrammarReading', duration: M(105) },
-      vocab_only:   { labelKey: 'secLangKnowledgeVocab',          subLabelKey: 'indN2VocabOnly',         duration: M(40) },
-      reading_only: { labelKey: 'secLangKnowledgeGrammarReading', subLabelKey: 'indN2ReadingOnly',       duration: M(65) },
-      listening:    { labelKey: 'secListening',                   subLabelKey: 'indSec2',                duration: M(50) },
+      sec1: { labelKey: 'secLangKnowledgeReading', subLabelKey: 'subVocabGrammarReading', duration: M(105) },
+      vocab_only: { labelKey: 'secLangKnowledgeVocab', subLabelKey: 'indN2VocabOnly', duration: M(40) },
+      reading_only: { labelKey: 'secLangKnowledgeGrammarReading', subLabelKey: 'indN2ReadingOnly', duration: M(65) },
+      listening: { labelKey: 'secListening', subLabelKey: 'indSec2', duration: M(50) },
     },
   },
   N3: {
     sections: [
-      { type: 'exam', labelKey: 'secLangKnowledgeVocab',          tlKey: 'tlVocab',     subLabelKey: 'sub1of3', duration: M(30) },
+      { type: 'exam', labelKey: 'secLangKnowledgeVocab', tlKey: 'tlVocab', subLabelKey: 'sub1of3', duration: M(30) },
       BREAK_20,
-      { type: 'exam', labelKey: 'secLangKnowledgeGrammarReading', tlKey: 'tlGrammar',   subLabelKey: 'sub2of3', duration: M(70) },
+      { type: 'exam', labelKey: 'secLangKnowledgeGrammarReading', tlKey: 'tlGrammar', subLabelKey: 'sub2of3', duration: M(70) },
       BREAK_30,
-      { type: 'exam', labelKey: 'secListening',                   tlKey: 'tlListening', subLabelKey: 'sub3of3', duration: M(40) },
+      { type: 'exam', labelKey: 'secListening', tlKey: 'tlListening', subLabelKey: 'sub3of3', duration: M(40) },
     ],
     individual: {
-      vocab:        { labelKey: 'secLangKnowledgeVocab',          subLabelKey: 'indSec1', duration: M(30) },
-      grammar:      { labelKey: 'secLangKnowledgeGrammarReading', subLabelKey: 'indSec2', duration: M(70) },
-      listening:    { labelKey: 'secListening',                   subLabelKey: 'indSec3', duration: M(40) },
-      vocab_only:   null,
+      vocab: { labelKey: 'secLangKnowledgeVocab', subLabelKey: 'indSec1', duration: M(30) },
+      grammar: { labelKey: 'secLangKnowledgeGrammarReading', subLabelKey: 'indSec2', duration: M(70) },
+      listening: { labelKey: 'secListening', subLabelKey: 'indSec3', duration: M(40) },
+      vocab_only: null,
       reading_only: null,
     },
   },
   N4: {
     sections: [
-      { type: 'exam', labelKey: 'secLangKnowledgeVocab',          tlKey: 'tlVocab',     subLabelKey: 'sub1of3', duration: M(25) },
+      { type: 'exam', labelKey: 'secLangKnowledgeVocab', tlKey: 'tlVocab', subLabelKey: 'sub1of3', duration: M(25) },
       BREAK_20,
-      { type: 'exam', labelKey: 'secLangKnowledgeGrammarReading', tlKey: 'tlGrammar',   subLabelKey: 'sub2of3', duration: M(55) },
+      { type: 'exam', labelKey: 'secLangKnowledgeGrammarReading', tlKey: 'tlGrammar', subLabelKey: 'sub2of3', duration: M(55) },
       BREAK_30,
-      { type: 'exam', labelKey: 'secListening',                   tlKey: 'tlListening', subLabelKey: 'sub3of3', duration: M(35) },
+      { type: 'exam', labelKey: 'secListening', tlKey: 'tlListening', subLabelKey: 'sub3of3', duration: M(35) },
     ],
     individual: {
-      vocab:        { labelKey: 'secLangKnowledgeVocab',          subLabelKey: 'indSec1', duration: M(25) },
-      grammar:      { labelKey: 'secLangKnowledgeGrammarReading', subLabelKey: 'indSec2', duration: M(55) },
-      listening:    { labelKey: 'secListening',                   subLabelKey: 'indSec3', duration: M(35) },
-      vocab_only:   null,
+      vocab: { labelKey: 'secLangKnowledgeVocab', subLabelKey: 'indSec1', duration: M(25) },
+      grammar: { labelKey: 'secLangKnowledgeGrammarReading', subLabelKey: 'indSec2', duration: M(55) },
+      listening: { labelKey: 'secListening', subLabelKey: 'indSec3', duration: M(35) },
+      vocab_only: null,
       reading_only: null,
     },
   },
   N5: {
     sections: [
-      { type: 'exam', labelKey: 'secLangKnowledgeVocab',          tlKey: 'tlVocab',     subLabelKey: 'sub1of3', duration: M(20) },
+      { type: 'exam', labelKey: 'secLangKnowledgeVocab', tlKey: 'tlVocab', subLabelKey: 'sub1of3', duration: M(20) },
       BREAK_20,
-      { type: 'exam', labelKey: 'secLangKnowledgeGrammarReading', tlKey: 'tlGrammar',   subLabelKey: 'sub2of3', duration: M(40) },
+      { type: 'exam', labelKey: 'secLangKnowledgeGrammarReading', tlKey: 'tlGrammar', subLabelKey: 'sub2of3', duration: M(40) },
       BREAK_30,
-      { type: 'exam', labelKey: 'secListening',                   tlKey: 'tlListening', subLabelKey: 'sub3of3', duration: M(30) },
+      { type: 'exam', labelKey: 'secListening', tlKey: 'tlListening', subLabelKey: 'sub3of3', duration: M(30) },
     ],
     individual: {
-      vocab:        { labelKey: 'secLangKnowledgeVocab',          subLabelKey: 'indSec1', duration: M(20) },
-      grammar:      { labelKey: 'secLangKnowledgeGrammarReading', subLabelKey: 'indSec2', duration: M(40) },
-      listening:    { labelKey: 'secListening',                   subLabelKey: 'indSec3', duration: M(30) },
-      vocab_only:   null,
+      vocab: { labelKey: 'secLangKnowledgeVocab', subLabelKey: 'indSec1', duration: M(20) },
+      grammar: { labelKey: 'secLangKnowledgeGrammarReading', subLabelKey: 'indSec2', duration: M(40) },
+      listening: { labelKey: 'secListening', subLabelKey: 'indSec3', duration: M(30) },
+      vocab_only: null,
       reading_only: null,
     },
   },
@@ -275,19 +287,20 @@ const LEVELS = {
 // ================================================================
 
 const State = {
-  lang:       'vi',     // Default to Vietnamese
-  level:      'N1',
-  mode:       'full',
-  status:     'idle',   // 'idle' | 'running' | 'break' | 'done'
-  phases:     [],
+  lang: 'vi',       // Default to Vietnamese
+  level: 'N1',
+  mode: 'full',
+  status: 'idle',   // 'idle' | 'running' | 'break' | 'paused' | 'done'
+  pausedFrom: null, // 'running' | 'break'
+  remainingOnPause: 0,
+  phases: [],
   phaseIndex: 0,
-  endTime:    null,
+  endTime: null,
   phaseStart: null,
-  rafId:      null,
-  holdTimer:  null,
-  holdStart:  null,
-  warnFired:  false,
-  _collapsed: [],
+  rafId: null,
+  holdTimer: null,
+  holdStart: null,
+  warnFired: false,
 };
 
 // ================================================================
@@ -296,7 +309,7 @@ const State = {
 
 function t(key, ...args) {
   const dict = I18N[State.lang] || I18N.vi;
-  const val  = dict[key] !== undefined ? dict[key] : (I18N.vi[key] ?? key);
+  const val = dict[key] !== undefined ? dict[key] : (I18N.vi[key] ?? key);
   return typeof val === 'function' ? val(...args) : val;
 }
 
@@ -307,37 +320,38 @@ function t(key, ...args) {
 const $ = id => document.getElementById(id);
 
 const dom = {
-  progressFill:    $('progress-bar-fill'),
-  appTitle:        $('app-title'),
-  brandBadge:      $('brand-badge'),
-  langSeg:         $('lang-seg'),
-  langPill:        $('lang-pill'),
-  darkToggle:      $('dark-toggle'),
-  labelLevel:      $('label-level'),
-  labelMode:       $('label-mode'),
-  levelSeg:        $('level-seg'),
-  modeSeg:         $('mode-seg'),
-  levelPill:       $('level-pill'),
-  modePill:        $('mode-pill'),
-  levelSection:    $('level-section'),
-  modeSection:     $('mode-section'),
+  progressFill: $('progress-bar-fill'),
+  appTitle: $('app-title'),
+  brandBadge: $('brand-badge'),
+  langSeg: $('lang-seg'),
+  langPill: $('lang-pill'),
+  darkToggle: $('dark-toggle'),
+  labelLevel: $('label-level'),
+  labelMode: $('label-mode'),
+  levelSeg: $('level-seg'),
+  modeSeg: $('mode-seg'),
+  levelPill: $('level-pill'),
+  modePill: $('mode-pill'),
+  levelSection: $('level-section'),
+  modeSection: $('mode-section'),
   timelineSection: $('timeline-section'),
   timelinePreview: $('timeline-preview'),
-  phaseLabel:      $('phase-label'),
-  countdown:       $('countdown'),
-  subphaseLabel:   $('subphase-label'),
-  startBtn:        $('start-btn'),
-  skipBreakBtn:    $('skip-break-btn'),
-  resetBtn:        $('reset-btn'),
-  holdText:        $('hold-text'),
-  holdFill:        document.querySelector('.hold-fill'),
-  warningFlash:    $('warning-flash'),
-  btnSec1:         $('btn-sec1'),
-  btnVocab:        $('btn-vocab'),
-  btnGrammar:      $('btn-grammar'),
-  btnVocabOnly:    $('btn-vocab-only'),
-  btnReadingOnly:  $('btn-reading-only'),
-  btnListening:    $('btn-listening'),
+  phaseLabel: $('phase-label'),
+  countdown: $('countdown'),
+  subphaseLabel: $('subphase-label'),
+  startBtn: $('start-btn'),
+  skipBreakBtn: $('skip-break-btn'),
+  pauseBtn: $('pause-btn'),
+  resetBtn: $('reset-btn'),
+  holdText: $('hold-text'),
+  holdFill: document.querySelector('.hold-fill'),
+  warningFlash: $('warning-flash'),
+  btnSec1: $('btn-sec1'),
+  btnVocab: $('btn-vocab'),
+  btnGrammar: $('btn-grammar'),
+  btnVocabOnly: $('btn-vocab-only'),
+  btnReadingOnly: $('btn-reading-only'),
+  btnListening: $('btn-listening'),
 };
 
 // ================================================================
@@ -368,7 +382,7 @@ function tone(freq, startTime, duration, type = 'sine', gain = 0.3) {
 function chimeStart() {
   ensureAudio();
   const t0 = audioCtx.currentTime;
-  tone(880, t0,        0.6, 'sine', 0.28);
+  tone(880, t0, 0.6, 'sine', 0.28);
   tone(1108, t0 + 0.1, 0.5, 'sine', 0.18);
   tone(1320, t0 + 0.2, 0.7, 'sine', 0.22);
 }
@@ -382,21 +396,21 @@ function chimePencilsDown() {
 function chimeWarning() {
   ensureAudio();
   const t0 = audioCtx.currentTime;
-  tone(1047, t0,        0.08, 'square', 0.12);
+  tone(1047, t0, 0.08, 'square', 0.12);
   tone(1047, t0 + 0.14, 0.08, 'square', 0.12);
 }
 
 function chimeBreakPhase() {
   ensureAudio();
   const t0 = audioCtx.currentTime;
-  tone(392, t0,       1.2, 'sine', 0.22);
+  tone(392, t0, 1.2, 'sine', 0.22);
   tone(523, t0 + 0.1, 0.9, 'sine', 0.14);
 }
 
 function chimeDone() {
   ensureAudio();
   const t0 = audioCtx.currentTime;
-  tone(1047, t0,       0.4, 'sine', 0.22);
+  tone(1047, t0, 0.4, 'sine', 0.22);
   tone(1319, t0 + 0.2, 0.4, 'sine', 0.22);
   tone(1047, t0 + 0.5, 0.7, 'sine', 0.18);
 }
@@ -412,7 +426,7 @@ function initSegmented(segEl, pillEl, onChange) {
     if (!btn || !btn.offsetParent) return;
     const segRect = segEl.getBoundingClientRect();
     const btnRect = btn.getBoundingClientRect();
-    pillEl.style.left  = (btnRect.left - segRect.left + 2) + 'px';
+    pillEl.style.left = (btnRect.left - segRect.left + 2) + 'px';
     pillEl.style.width = (btnRect.width - 4) + 'px';
   }
 
@@ -483,17 +497,17 @@ function applyLang() {
 
   // Selector labels
   dom.labelLevel.textContent = t('levelLabel');
-  dom.labelMode.textContent  = t('modeLabel');
+  dom.labelMode.textContent = t('modeLabel');
 
   // Mode button texts
   const modeMap = {
-    full:         'mFull',
-    sec1:         'mSec1',
-    vocab_only:   'mVocabOnly',
+    full: 'mFull',
+    sec1: 'mSec1',
+    vocab_only: 'mVocabOnly',
     reading_only: 'mReadingOnly',
-    vocab:        'mVocab',
-    grammar:      'mGrammar',
-    listening:    'mListening',
+    vocab: 'mVocab',
+    grammar: 'mGrammar',
+    listening: 'mListening',
   };
   dom.modeSeg.querySelectorAll('.seg-btn').forEach(btn => {
     const key = modeMap[btn.dataset.value];
@@ -502,7 +516,8 @@ function applyLang() {
 
   // Action buttons
   dom.skipBreakBtn.textContent = t('skipBreak');
-  dom.holdText.textContent     = t('holdReset');
+  dom.pauseBtn.textContent = State.status === 'paused' ? `▶ ${t('resumeBtn')}` : `⏸ ${t('pauseBtn')}`;
+  dom.holdText.textContent = t('holdReset');
 
   // Start button based on status
   dom.startBtn.textContent = State.status === 'done' ? t('restartBtn') : t('startBtn');
@@ -522,12 +537,12 @@ function applyLang() {
   // Adjust sliding pill bounds
   requestAnimationFrame(() => {
     if (levelCtrl) levelCtrl.reposition();
-    if (modeCtrl)  modeCtrl.reposition();
-    if (langCtrl)  langCtrl.reposition();
+    if (modeCtrl) modeCtrl.reposition();
+    if (langCtrl) langCtrl.reposition();
   });
 
   // Save preference
-  try { localStorage.setItem('jlpt_lang', State.lang); } catch (_) {}
+  try { localStorage.setItem('jlpt_lang', State.lang); } catch (_) { }
 }
 
 // ================================================================
@@ -549,7 +564,7 @@ function buildTimeline() {
   phases.forEach((entry, idx) => {
     if (idx > 0) {
       const arrow = document.createElement('span');
-      arrow.className   = 'tl-arrow';
+      arrow.className = 'tl-arrow';
       arrow.textContent = '\u2192';
       preview.appendChild(arrow);
     }
@@ -561,14 +576,14 @@ function buildTimeline() {
     block.dataset.entryIdx = idx;
 
     if (entry.type === 'exam') {
-      const mins  = Math.round(entry.duration / 60);
+      const mins = Math.round(entry.duration / 60);
       const label = t(entry.tlKey || entry.labelKey);
-      const unit  = State.lang === 'ja' ? '分' : State.lang === 'vi' ? 'p' : 'm';
-      block.className   = 'tl-block exam';
+      const unit = State.lang === 'ja' ? '分' : State.lang === 'vi' ? 'p' : 'm';
+      block.className = 'tl-block exam';
       block.textContent = `${label} \u00b7 ${mins}${unit}`;
     } else {
       const mins = Math.round(entry.duration / 60);
-      block.className   = 'tl-block brk';
+      block.className = 'tl-block brk';
       block.textContent = t('tlBreak', mins);
     }
 
@@ -600,9 +615,9 @@ function resolvePhases() {
 
 function startExam() {
   ensureAudio();
-  State.phases      = resolvePhases();
-  State.phaseIndex  = 0;
-  State.warnFired   = false;
+  State.phases = resolvePhases();
+  State.phaseIndex = 0;
+  State.warnFired = false;
   if (!State.phases.length) return;
   startPhase(0);
   lockSelectors();
@@ -615,9 +630,9 @@ function startPhase(idx) {
   lastRemainingSec = -1;
   State.phaseIndex = idx;
   State.phaseStart = Date.now();
-  State.endTime    = Date.now() + State.phases[idx].duration * 1000;
-  State.warnFired  = false;
-  State.status     = State.phases[idx].type === 'break' ? 'break' : 'running';
+  State.endTime = Date.now() + State.phases[idx].duration * 1000;
+  State.warnFired = false;
+  State.status = State.phases[idx].type === 'break' ? 'break' : 'running';
   updateUI();
   cancelAnimationFrame(State.rafId);
   State.rafId = requestAnimationFrame(tick);
@@ -666,7 +681,7 @@ function tick() {
 
 function onPhaseEnd() {
   dom.countdown.classList.remove('warning');
-  const phase   = State.phases[State.phaseIndex];
+  const phase = State.phases[State.phaseIndex];
   const nextIdx = State.phaseIndex + 1;
 
   if (phase.type === 'exam') {
@@ -683,12 +698,12 @@ function onPhaseEnd() {
 }
 
 function finishExam() {
-  State.status  = 'done';
+  State.status = 'done';
   State.endTime = null;
-  dom.phaseLabel.textContent    = t('examComplete');
-  dom.countdown.textContent     = '00:00';
+  dom.phaseLabel.textContent = t('examComplete');
+  dom.countdown.textContent = '00:00';
   dom.subphaseLabel.textContent = '';
-  dom.progressFill.style.width  = '100%';
+  dom.progressFill.style.width = '100%';
   document.title = t('titleDone', State.level);
   chimeDone();
   unlockSelectors();
@@ -696,11 +711,13 @@ function finishExam() {
 }
 
 // ================================================================
-// 11. SKIP BREAK LOGIC
+// 11. SKIP BREAK & PAUSE / RESUME LOGIC
 // ================================================================
 
 function skipEntireBreak() {
   cancelAnimationFrame(State.rafId);
+  State.pausedFrom = null;
+  State.remainingOnPause = 0;
   const nextIdx = State.phaseIndex + 1;
   if (nextIdx >= State.phases.length) {
     finishExam();
@@ -708,6 +725,36 @@ function skipEntireBreak() {
   }
   startPhase(nextIdx);
   chimeStart();
+}
+
+function pauseExam() {
+  if (State.status !== 'running' && State.status !== 'break') return;
+  cancelAnimationFrame(State.rafId);
+  const remainingMs = Math.max(0, State.endTime - Date.now());
+  State.remainingOnPause = remainingMs;
+  State.pausedFrom = State.status;
+  State.status = 'paused';
+  updateUI();
+}
+
+function resumeExam() {
+  if (State.status !== 'paused') return;
+  State.endTime = Date.now() + State.remainingOnPause;
+  State.status = State.pausedFrom || 'running';
+  State.pausedFrom = null;
+  State.remainingOnPause = 0;
+  lastRemainingSec = -1;
+  updateUI();
+  cancelAnimationFrame(State.rafId);
+  State.rafId = requestAnimationFrame(tick);
+}
+
+function togglePause() {
+  if (State.status === 'running' || State.status === 'break') {
+    pauseExam();
+  } else if (State.status === 'paused') {
+    resumeExam();
+  }
 }
 
 // ================================================================
@@ -718,11 +765,13 @@ const HOLD_MS = 1500;
 
 function resetAll() {
   cancelAnimationFrame(State.rafId);
-  State.status     = 'idle';
-  State.endTime    = null;
-  State.phases     = [];
+  State.status = 'idle';
+  State.pausedFrom = null;
+  State.remainingOnPause = 0;
+  State.endTime = null;
+  State.phases = [];
   State.phaseIndex = 0;
-  dom.countdown.classList.remove('warning');
+  dom.countdown.classList.remove('warning', 'paused');
   dom.progressFill.style.width = '0%';
   document.title = t('titleIdle');
   unlockSelectors();
@@ -731,7 +780,7 @@ function resetAll() {
 }
 
 function setupHoldReset() {
-  const btn  = dom.resetBtn;
+  const btn = dom.resetBtn;
   const fill = dom.holdFill;
 
   function startHold() {
@@ -759,11 +808,11 @@ function setupHoldReset() {
     fill.style.width = '0%';
   }
 
-  btn.addEventListener('mousedown',   startHold);
-  btn.addEventListener('touchstart',  startHold, { passive: true });
-  btn.addEventListener('mouseup',     endHold);
-  btn.addEventListener('mouseleave',  endHold);
-  btn.addEventListener('touchend',    endHold);
+  btn.addEventListener('mousedown', startHold);
+  btn.addEventListener('touchstart', startHold, { passive: true });
+  btn.addEventListener('mouseup', endHold);
+  btn.addEventListener('mouseleave', endHold);
+  btn.addEventListener('touchend', endHold);
   btn.addEventListener('touchcancel', endHold);
 }
 
@@ -772,50 +821,74 @@ function setupHoldReset() {
 // ================================================================
 
 function updateUI() {
-  const isBreak = State.status === 'break';
-  const isIdle  = State.status === 'idle';
-  const isDone  = State.status === 'done';
+  const isPaused = State.status === 'paused';
+  const isBreak = State.status === 'break' || (isPaused && State.pausedFrom === 'break');
+  const isIdle = State.status === 'idle';
+  const isDone = State.status === 'done';
 
   if (isIdle) {
     const upcoming = resolvePhases();
     const firstPhase = upcoming.length > 0 ? upcoming[0] : null;
     if (firstPhase) {
-      dom.phaseLabel.textContent    = t(firstPhase.labelKey);
+      dom.phaseLabel.textContent = t(firstPhase.labelKey);
       dom.subphaseLabel.textContent = t(firstPhase.subLabelKey);
-      dom.countdown.textContent     = formatTime(firstPhase.duration);
+      dom.countdown.textContent = formatTime(firstPhase.duration);
     } else {
-      dom.phaseLabel.textContent    = '';
+      dom.phaseLabel.textContent = '';
       dom.subphaseLabel.textContent = '';
-      dom.countdown.textContent     = '00:00';
+      dom.countdown.textContent = '00:00';
     }
-    dom.countdown.classList.remove('warning');
+    dom.countdown.classList.remove('warning', 'paused');
     dom.progressFill.style.width = '0%';
   } else if (isDone) {
-    dom.phaseLabel.textContent    = t('examComplete');
-    dom.countdown.textContent     = '00:00';
+    dom.phaseLabel.textContent = t('examComplete');
+    dom.countdown.textContent = '00:00';
     dom.subphaseLabel.textContent = '';
+    dom.countdown.classList.remove('warning', 'paused');
   } else {
     const phase = State.phases[State.phaseIndex];
     if (phase) {
       if (isBreak) {
         const mins = Math.round(phase.duration / 60);
         const unit = State.lang === 'ja' ? '分' : State.lang === 'vi' ? ' phút' : ' min';
-        dom.phaseLabel.textContent    = `${t('bkBreak')} (${mins}${unit})`;
-        dom.subphaseLabel.textContent = t('bkBreakSub');
+        dom.phaseLabel.textContent = `${t('bkBreak')} (${mins}${unit})`;
       } else {
-        dom.phaseLabel.textContent    = t(phase.labelKey);
-        dom.subphaseLabel.textContent = t(phase.subLabelKey);
+        dom.phaseLabel.textContent = t(phase.labelKey);
+      }
+
+      if (isPaused) {
+        dom.subphaseLabel.textContent = t('pausedNotice');
+      } else {
+        dom.subphaseLabel.textContent = isBreak ? t('bkBreakSub') : t(phase.subLabelKey);
       }
     } else {
-      dom.phaseLabel.textContent    = '';
+      dom.phaseLabel.textContent = '';
       dom.subphaseLabel.textContent = '';
+    }
+
+    dom.countdown.classList.toggle('paused', isPaused);
+
+    if (isPaused) {
+      const phaseText = phase && phase.type === 'exam' ? t(phase.labelKey) : t('bkBreak');
+      const remSec = Math.ceil(State.remainingOnPause / 1000);
+      document.title = t('titlePaused', formatTime(remSec), phaseText, State.level);
     }
   }
 
   // Button visibility
-  dom.startBtn.classList.toggle('hidden',     !isIdle && !isDone);
-  dom.resetBtn.classList.toggle('hidden',     isIdle || isDone);
+  dom.startBtn.classList.toggle('hidden', !isIdle && !isDone);
+  dom.resetBtn.classList.toggle('hidden', isIdle || isDone);
   dom.skipBreakBtn.classList.toggle('hidden', !isBreak);
+  dom.pauseBtn.classList.toggle('hidden', isIdle || isDone);
+
+  // Pause button state & styling
+  if (isPaused) {
+    dom.pauseBtn.textContent = `▶ ${t('resumeBtn')}`;
+    dom.pauseBtn.classList.add('resuming');
+  } else {
+    dom.pauseBtn.textContent = `⏸ ${t('pauseBtn')}`;
+    dom.pauseBtn.classList.remove('resuming');
+  }
 
   dom.startBtn.textContent = isDone ? t('restartBtn') : t('startBtn');
   dom.holdText.textContent = t('holdReset');
@@ -828,6 +901,7 @@ function showDoneState() {
   dom.startBtn.textContent = t('restartBtn');
   dom.resetBtn.classList.add('hidden');
   dom.skipBreakBtn.classList.add('hidden');
+  dom.pauseBtn.classList.add('hidden');
 }
 
 function lockSelectors() {
@@ -846,11 +920,11 @@ function unlockSelectors() {
 
 function updateModeOptions() {
   const isN12 = State.level === 'N1' || State.level === 'N2';
-  if (dom.btnSec1) dom.btnSec1.style.display               = isN12 ? '' : 'none';
-  if (dom.btnVocabOnly) dom.btnVocabOnly.style.display     = isN12 ? '' : 'none';
+  if (dom.btnSec1) dom.btnSec1.style.display = isN12 ? '' : 'none';
+  if (dom.btnVocabOnly) dom.btnVocabOnly.style.display = isN12 ? '' : 'none';
   if (dom.btnReadingOnly) dom.btnReadingOnly.style.display = isN12 ? '' : 'none';
-  if (dom.btnVocab) dom.btnVocab.style.display             = isN12 ? 'none' : '';
-  if (dom.btnGrammar) dom.btnGrammar.style.display         = isN12 ? 'none' : '';
+  if (dom.btnVocab) dom.btnVocab.style.display = isN12 ? 'none' : '';
+  if (dom.btnGrammar) dom.btnGrammar.style.display = isN12 ? 'none' : '';
 }
 
 // ================================================================
@@ -954,14 +1028,28 @@ function boot() {
   // Skip break action
   dom.skipBreakBtn.addEventListener('click', skipEntireBreak);
 
+  // Pause / Resume action
+  dom.pauseBtn.addEventListener('click', togglePause);
+
+  // Keyboard shortcut: Spacebar to toggle Pause / Resume
+  document.addEventListener('keydown', (e) => {
+    if (e.code === 'Space' && (State.status === 'running' || State.status === 'break' || State.status === 'paused')) {
+      const tag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
+      if (tag !== 'input' && tag !== 'textarea') {
+        e.preventDefault();
+        togglePause();
+      }
+    }
+  });
+
   // Hold to reset
   setupHoldReset();
 
   // ResizeObserver to keep all sliding pills positioned accurately on resize
   const ro = new ResizeObserver(() => {
     if (levelCtrl) levelCtrl.reposition();
-    if (modeCtrl)  modeCtrl.reposition();
-    if (langCtrl)  langCtrl.reposition();
+    if (modeCtrl) modeCtrl.reposition();
+    if (langCtrl) langCtrl.reposition();
   });
   ro.observe(document.body);
 
