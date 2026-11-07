@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JLPT Exam Timer</title>
+  <link rel="icon" type="image/png" href="tab-icon.png" />
+  <link rel="apple-touch-icon" href="tab-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Static background layer (1.jpg) -->
+  <div id="bg-layer"></div>
+  <div id="bg-overlay"></div>
+
+  <!-- Progress Bar -->
+  <div id="progress-bar-track">
+    <div id="progress-bar-fill"></div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <span id="app-title"></span>
+    <div id="header-controls">
+      <!-- Language segmented bar -->
+      <div class="segmented" id="lang-seg" role="radiogroup" aria-label="Select language">
+        <button class="seg-btn active" data-value="vi" role="radio" aria-checked="true">VI</button>
+        <button class="seg-btn"       data-value="en" role="radio" aria-checked="false">EN</button>
+        <button class="seg-btn"       data-value="ja" role="radio" aria-checked="false">JP</button>
+        <span class="seg-pill" id="lang-pill"></span>
+      </div>
+      <button id="dark-toggle" class="icon-btn" title="Toggle overlay">◑</button>
+    </div>
+  </header>
+
+  <!-- Brand Logo Badge (Top-Left of body) -->
+  <div class="brand-badge" id="brand-badge">
+    <div class="brand-card">
+      <img src="header.png" alt="JLPT Exam Simulation" class="brand-logo-img" />
+    </div>
+  </div>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Level Selector -->
+    <section id="level-section" class="selector-section">
+      <label id="label-level" class="selector-label"></label>
+      <div class="segmented" id="level-seg" role="radiogroup" aria-label="Select JLPT level">
+        <button class="seg-btn active" data-value="N1" role="radio" aria-checked="true">N1</button>
+        <button class="seg-btn" data-value="N2" role="radio" aria-checked="false">N2</button>
+        <button class="seg-btn" data-value="N3" role="radio" aria-checked="false">N3</button>
+        <button class="seg-btn" data-value="N4" role="radio" aria-checked="false">N4</button>
+        <button class="seg-btn" data-value="N5" role="radio" aria-checked="false">N5</button>
+        <span class="seg-pill" id="level-pill"></span>
+      </div>
+    </section>
+
+    <!-- Mode Selector -->
+    <section id="mode-section" class="selector-section">
+      <label id="label-mode" class="selector-label"></label>
+      <div class="segmented wide" id="mode-seg" role="radiogroup" aria-label="Select exam mode">
+        <button class="seg-btn active" data-value="full"         role="radio" aria-checked="true"></button>
+        <button class="seg-btn"       data-value="sec1"         role="radio" aria-checked="false" id="btn-sec1"></button>
+        <button class="seg-btn"       data-value="vocab_only"   role="radio" aria-checked="false" id="btn-vocab-only"></button>
+        <button class="seg-btn"       data-value="reading_only" role="radio" aria-checked="false" id="btn-reading-only"></button>
+        <button class="seg-btn"       data-value="vocab"        role="radio" aria-checked="false" id="btn-vocab"></button>
+        <button class="seg-btn"       data-value="grammar"      role="radio" aria-checked="false" id="btn-grammar"></button>
+        <button class="seg-btn"       data-value="listening"    role="radio" aria-checked="false" id="btn-listening"></button>
+        <span class="seg-pill" id="mode-pill"></span>
+      </div>
+    </section>
+
+    <!-- Timeline Preview -->
+    <section id="timeline-section">
+      <div id="timeline-preview"></div>
+    </section>
+
+    <!-- Hero Timer Card -->
+    <section id="timer-section">
+      <div id="phase-label"></div>
+      <div id="countdown">110:00</div>
+      <div id="subphase-label"></div>
+    </section>
+
+    <!-- Break Phase Indicator -->
+    <section id="break-phase-section" class="hidden">
+      <div class="break-steps">
+        <div class="break-step" id="bstep-1">
+          <span class="step-num">1</span>
+          <span class="step-text" id="bstep-1-text"></span>
+        </div>
+        <div class="break-step-line"></div>
+        <div class="break-step" id="bstep-2">
+          <span class="step-num">2</span>
+          <span class="step-text" id="bstep-2-text"></span>
+        </div>
+        <div class="break-step-line"></div>
+        <div class="break-step" id="bstep-3">
+          <span class="step-num">3</span>
+          <span class="step-text" id="bstep-3-text"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls -->
+    <section id="controls-section">
+      <button id="start-btn"></button>
+      <button id="skip-break-btn" class="hidden"></button>
+      <button id="skip-phase-btn" class="hidden secondary-btn"></button>
+      <button id="reset-btn"      class="hidden hold-btn">
+        <span class="hold-text" id="hold-text"></span>
+        <span class="hold-fill"></span>
+      </button>
+    </section>
+
+  </main>
+
+  <!-- Warning Flash -->
+  <div id="warning-flash" class="hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
