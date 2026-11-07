@@ -79,7 +79,7 @@ const I18N = {
     breakPhaseLabel: (num, lbl) => `Giải lao \u00b7 Giai đoạn ${num}/3 \u00b7 ${lbl}`,
     breakTitleFrag:  lbl        => `Giải lao (${lbl})`,
     titleDone:       lvl        => `Hoàn thành bài thi \u2014 JLPT ${lvl}`,
-    titleIdle:       'JLPT Exam Timer — Luyện thi',
+    titleIdle:       'Đồng hồ thi JLPT — Mô phỏng chuẩn JEES (N1-N5)',
     titleRunning:    (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
   },
 
@@ -151,7 +151,7 @@ const I18N = {
     breakPhaseLabel: (num, lbl) => `Break \u00b7 Phase ${num}/3 \u00b7 ${lbl}`,
     breakTitleFrag:  lbl        => `Break (${lbl})`,
     titleDone:       lvl        => `Exam Complete \u2014 JLPT ${lvl}`,
-    titleIdle:       'JLPT Exam Timer Simulation',
+    titleIdle:       'JLPT Exam Timer — Official JEES Timing Simulation (N1-N5)',
     titleRunning:    (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
   },
 
@@ -223,7 +223,7 @@ const I18N = {
     breakPhaseLabel: (num, lbl) => `休憩 \u00b7 フェーズ ${num}/3 \u00b7 ${lbl}`,
     breakTitleFrag:  lbl        => `休憩（${lbl}）`,
     titleDone:       lvl        => `試験終了 \u2014 JLPT ${lvl}`,
-    titleIdle:       'JLPT 模擬タイマー',
+    titleIdle:       'JLPT 模擬タイマー — JEES 公式本試験仕様 (N1-N5)',
     titleRunning:    (time, phase, lvl) => `[${time}] ${phase} \u2014 JLPT ${lvl}`,
   },
 };

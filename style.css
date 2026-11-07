@@ -706,6 +706,45 @@ main {
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: var(--glass-border); border-radius: 2px; }
 
+/* ---- Footer Credit Line ---- */
+#app-footer {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 1.2rem 1.4rem 2.6rem;
+  margin-top: auto;
+  user-select: none;
+}
+
+.footer-credit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.footer-credit .footer-sep {
+  opacity: 0.35;
+}
+
+.footer-credit .footer-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.footer-credit .footer-link:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 1259px) {
   .brand-badge {

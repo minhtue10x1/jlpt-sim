@@ -3,12 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JLPT Exam Timer</title>
+  <title>JLPT Exam Timer — Official JEES Timing Simulation (N1, N2, N3, N4, N5)</title>
+
+  <!-- Primary SEO Metadata -->
+  <meta name="title" content="JLPT Exam Timer — Official JEES Timing Simulation (N1, N2, N3, N4, N5)" />
+  <meta name="description" content="Free official JEES JLPT Exam Timer simulation for N1, N2, N3, N4, and N5. Features exact official test section durations, real 3-phase break simulation, audio chime alerts, and multi-language support (English, Tiếng Việt, 日本語)." />
+  <meta name="keywords" content="JLPT timer, JLPT exam timer, đồng hồ thi JLPT, JLPT N1 timer, JLPT N2 timer, JLPT N3 timer, JLPT N4 timer, JLPT N5 timer, JEES JLPT timing, JLPT mock test timer, 日本語能力試験 タイマー" />
+  <meta name="author" content="minhtue10x1" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <link rel="canonical" href="https://jlptsim.web.app/" />
+  <meta name="theme-color" content="#080812" />
+
+  <!-- Open Graph / Facebook / Zalo / Discord -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jlptsim.web.app/" />
+  <meta property="og:site_name" content="JLPT Exam Timer" />
+  <meta property="og:title" content="JLPT Exam Timer — Official JEES Timing Simulation (N1, N2, N3, N4, N5)" />
+  <meta property="og:description" content="Simulate real JEES JLPT exam conditions with official section countdowns, 3-phase break stages, audio signals, and zero-drift precision. Supports N1, N2, N3, N4, N5." />
+  <meta property="og:image" content="https://jlptsim.web.app/header.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="400" />
+  <meta property="og:image:alt" content="JLPT Exam Simulation Timer Logo" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="vi_VN" />
+  <meta property="og:locale:alternate" content="ja_JP" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://jlptsim.web.app/" />
+  <meta name="twitter:title" content="JLPT Exam Timer — Official JEES Timing Simulation (N1, N2, N3, N4, N5)" />
+  <meta name="twitter:description" content="Simulate real JEES JLPT exam conditions with official section countdowns, 3-phase break stages, audio signals, and zero-drift precision." />
+  <meta name="twitter:image" content="https://jlptsim.web.app/header.png" />
+  <meta name="twitter:creator" content="@minhtue10x1" />
+
+  <!-- Favicon & Icons -->
   <link rel="icon" type="image/png" href="tab-icon.png" />
   <link rel="apple-touch-icon" href="tab-icon.png" />
+
+  <!-- Google Fonts & Stylesheet -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured Data: WebApplication + FAQPage (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://jlptsim.web.app/#webapp",
+        "name": "JLPT Exam Timer",
+        "alternateName": [
+          "JLPT Sim",
+          "JLPT Mock Test Timer",
+          "Đồng hồ thi JLPT",
+          "日本語能力試験 タイマー"
+        ],
+        "url": "https://jlptsim.web.app/",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5 Audio API.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Official JEES JLPT Exam Timer simulation for levels N1 through N5 with precise official section timings, realistic 3-phase break intermissions, synthesized JEES chime sound effects, and multilingual support in English, Vietnamese, and Japanese.",
+        "image": "https://jlptsim.web.app/header.png",
+        "screenshot": "https://jlptsim.web.app/1.jpg",
+        "creator": {
+          "@type": "Person",
+          "name": "minhtue10x1",
+          "url": "https://github.com/minhtue10x1"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "minhtue10x1",
+          "url": "https://github.com/minhtue10x1"
+        },
+        "inLanguage": ["en", "vi", "ja"]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://jlptsim.web.app/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the official exam duration for JLPT N1?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The JLPT N1 exam consists of two sections: Section 1 (Language Knowledge: Vocabulary/Grammar and Reading) lasts 110 minutes; followed by a 30-minute break (consisting of paper collection, intermission, and audio test check); and Section 2 (Listening) lasts 55 minutes. Total exam time is 165 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the official exam duration for JLPT N2?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The JLPT N2 exam consists of two sections: Section 1 (Language Knowledge: Vocabulary/Grammar and Reading) lasts 105 minutes; followed by a 30-minute break; and Section 2 (Listening) lasts 50 minutes. Total exam time is 155 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the official exam duration for JLPT N3?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The JLPT N3 exam consists of three sections: Section 1 (Language Knowledge: Vocabulary) lasts 30 minutes; followed by a 20-minute break; Section 2 (Language Knowledge: Grammar and Reading) lasts 70 minutes; followed by a 30-minute break; and Section 3 (Listening) lasts 40 minutes. Total exam time is 140 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the official exam duration for JLPT N4?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The JLPT N4 exam consists of three sections: Section 1 (Language Knowledge: Vocabulary) lasts 25 minutes; followed by a 20-minute break; Section 2 (Language Knowledge: Grammar and Reading) lasts 55 minutes; followed by a 30-minute break; and Section 3 (Listening) lasts 35 minutes. Total exam time is 115 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the official exam duration for JLPT N5?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The JLPT N5 exam consists of three sections: Section 1 (Language Knowledge: Vocabulary) lasts 20 minutes; followed by a 20-minute break; Section 2 (Language Knowledge: Grammar and Reading) lasts 50 minutes; followed by a 30-minute break; and Section 3 (Listening) lasts 30 minutes. Total exam time is 100 minutes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the real JLPT break phase work in this simulation?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In official JEES test sites, breaks are divided into three distinct phases: (1) Paper Collection and Verification (~5 mins, examinees remain seated); (2) Restroom & Intermission (10-15 mins); (3) Return to Assigned Seat, Identity Check, and Audio Equipment Test (5-10 mins). This simulator models all three phases with chime alerts."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -118,6 +250,17 @@
     </section>
 
   </main>
+
+  <!-- Footer Credit Line -->
+  <footer id="app-footer">
+    <p class="footer-credit">
+      <span>Official JEES Standards</span>
+      <span class="footer-sep">·</span>
+      <span>Crafted by <a href="https://github.com/minhtue10x1" target="_blank" rel="noopener noreferrer" class="footer-link">minhtue10x1</a></span>
+      <span class="footer-sep">·</span>
+      <a href="https://github.com/minhtue10x1/jlpt-sim" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+    </p>
+  </footer>
 
   <!-- Warning Flash -->
   <div id="warning-flash" class="hidden"></div>
