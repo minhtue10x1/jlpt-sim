@@ -95,13 +95,13 @@ html[lang="ja"] #countdown,
   font-family: var(--font-timer) !important;
 }
 
-/* ---- Static Single Background (1.png) ---- */
+/* ---- Static Single Background (bg.webp) ---- */
 #bg-layer {
   position: fixed;
   inset: 0;
   z-index: 0;
   background-color: #080812;
-  background-image: url('1.png');
+  background-image: image-set(url('bg.webp') type('image/webp'), url('bg.jpg') type('image/jpeg')), url('data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADwAwCdASoYABAAPtFUo0uoJKMhsAgBABoJQBOgBDo6ztYSusoE/nKcAP70TkkexQpsNH5egkNjB1kBNbZSF399KDYmzmim1VzIag1U7uEYPMpzqHLqWjzIxAA=');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -5,7 +5,8 @@
     "ignore": [
       "firebase.json",
       "**/.*",
-      "**/node_modules/**"
+      "**/node_modules/**",
+      "src-assets/**"
     ],
     "headers": [
       {
@@ -14,6 +15,15 @@
           {
             "key": "Cache-Control",
             "value": "no-cache"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(webp|jpg|png)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=2592000"
           }
         ]
       }
